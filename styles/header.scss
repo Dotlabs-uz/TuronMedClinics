@@ -1,0 +1,31 @@
+.header {
+   @apply flex items-center justify-between my-10 max-lg:my-8 px-10 max-lg:px-8 max-md:px-5 py-7 max-lg:py-5 max-sm:px-0 rounded-lg bg-[#E6F6FE] max-sm:bg-white;
+
+   .logo {
+      @apply text-3xl max-lg:text-2xl font-bold;
+   }
+
+   nav ul {
+      @apply flex items-center gap-7 max-lg:gap-5  max-sm:w-full max-sm:absolute top-0 left-0 max-sm:flex-col max-sm:hidden;
+
+      li {
+         @apply font-medium hover:font-semibold tracking-[0.24px] cursor-pointer duration-150 ease-in;
+      }
+   }
+
+   .header-btns {
+      @apply flex items-center gap-2;
+
+      button {
+         @apply px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb];
+      }
+
+      .btn-pk {
+         @apply max-sm:hidden block;
+      }
+
+      .btn-md {
+         @apply max-sm:block hidden;
+      }
+   }
+}

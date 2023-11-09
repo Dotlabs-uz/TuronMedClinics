@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: "/generalSans/Fots/Variable/GeneralSans-Variable.ttf" format("ttf");
+  font-family: "generalSans";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import "/styles/header.scss";
+@import "/styles/footer.scss";
+@import "/styles/hero.scss";
+@import "/styles/welcoming.scss";
+@import "/styles/specialists.scss";
+
+body {
+  font-family: "generalSans", sans-serif;
+  color: #011632;
+}
+
+.custom-contaner {
+  @apply max-w-[1440px] w-full m-auto px-20 max-xl:px-10 max-lg:px-5;
+}
+
+h2 {
+  @apply mb-5 text-[42px] max-lg:text-[36px] max-md:text-[32px] max-sm:text-[36px] font-semibold leading-[125%];
+}

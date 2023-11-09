@@ -1,0 +1,41 @@
+.footer {
+   .footer-top {
+      @apply flex max-sm:flex-col items-center justify-between py-14 max-md:py-7;
+
+      .logo {
+         @apply max-sm:mb-5 text-3xl max-lg:text-2xl font-bold;
+      }
+
+      nav ul {
+         @apply flex max-sm:flex-col items-center gap-10 max-md:gap-5 max-sm:gap-3;
+
+         li {
+            @apply max-sm:text-sm font-medium tracking-[0.24px] cursor-pointer text-[#3C4959];
+         }
+      }
+   }
+
+   hr {
+      @apply w-full h-[2px] border-none bg-[#011632];
+   }
+
+   .footer-bottom {
+      @apply flex max-sm:flex-col-reverse items-center justify-between gap-5 py-8;
+
+      p {
+         @apply text-[14px] max-md:text-[12px] leading-[155%] tracking-[0.28px] text-[#011632];
+      }
+
+      .social {
+         @apply flex items-center gap-5;
+
+         li {
+            @apply p-3 max-lg:p-2 rounded-full bg-[#011632];
+
+            .icon {
+               @apply text-[23px] max-md:text-[16px] text-white;
+            }
+         }
+      }
+   }
+}
