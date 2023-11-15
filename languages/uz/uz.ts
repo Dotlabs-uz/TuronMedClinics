@@ -17,16 +17,53 @@ const uz = {
       text: "Dental 24H Emergency",
    },
    welcoming: {
-      title: "We’re welcoming new patients and can’t wait to meet you.",
+      consultation: "arizani qoldiring",
       title2:
-         "We use only the best quality materials on the market in order to provide the best products to our patients, So don’t worry about anything and book yourself.",
-      button: "Submit",
+         "Bizning ma'murlarimiz sizga 30 daqiqa ichida qo'ng'iroq qilishadi",
+      submit: "Yuborish",
+
+      title: "Yukori sifatli raqamli rentgen apparati diagnostikasi.",
+      text: "Turon asal premium klinikalari viloyat tajribali vrachlar va eng sungi avlod jixozlar maskani.",
+      button: "Uchrashuvni belgilang",
    },
    about: {
       title: "Тажрибали шифокорлар ва замонавий технологиялар маркази",
       title2:
          "Самарканд шаҳрининг марказида янгидан очилган клиникамизда қуйидаги тиббий хизматлар ва текширишлар кўрсатилади:",
       button: "Book an appointment",
+
+      services: [
+         {
+            service: "кардиология",
+         },
+         {
+            service: "терапия",
+         },
+         {
+            service: "гастроэнторология ва гепатология",
+         },
+         {
+            service: "физиотерапия",
+         },
+         {
+            service: "урология",
+         },
+         {
+            service: "урология",
+         },
+         {
+            service: "офтальмология",
+         },
+         {
+            service: "лор",
+         },
+         {
+            service: "бепуштлик ва дисфункцияни даволаш.",
+         },
+         {
+            service: "гинекология",
+         },
+      ],
    },
    video: {
       title: "We’re welcoming new patients and can’t wait to meet you.",

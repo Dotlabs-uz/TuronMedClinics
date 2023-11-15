@@ -5,6 +5,7 @@ import { FiInstagram } from "react-icons/fi";
 import { FaTelegramPlane } from "react-icons/fa";
 
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
@@ -15,10 +16,13 @@ const Footer: React.FC<FooterProps> = () => {
          <div className="footer">
             <div className="footer-top">
                <div className="">
-                  <div>
-                     <Link href="/" className="logo">
-                        Logo
-                     </Link>
+                  <div className="logo w-32 max-sm:w-2/4">
+                     <Image
+                        src={"/images/logo.png"}
+                        width={1000}
+                        height={1000}
+                        alt="logo"
+                     />
                   </div>
                   <div id="contacts">
                      <ul>

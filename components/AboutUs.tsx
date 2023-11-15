@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TranslateContext from "@/context/useTranslate";
 import { useContext } from "react";
+import { useRouter } from "next/router";
 
 import { LuShieldCheck } from "react-icons/lu";
 
@@ -8,73 +9,72 @@ interface AboutUsProps {}
 
 const AboutUs: React.FC<AboutUsProps> = () => {
    const translation: any = useContext(TranslateContext);
+   const router = useRouter();
+   const { locale } = router;
 
    const arr = [
       {
          id: 0,
-         titleRu: "кардиология",
-         titleUz: "кардиология",
-         titleTjk: "кардиология",
+         ru: "кардиология",
+         uz: "kardiologiya",
+         tjk: "кардиология",
       },
       {
          id: 1,
-         titleRu: "терапия",
-         titleUz: "терапия",
-         titleTjk: "терапия",
+         ru: "терапия",
+         uz: "terapiya",
+         tjk: "терапия",
       },
       {
          id: 2,
-         titleRu: "гастроэнторология ва гепатология",
-         titleUz: "гастроэнторология ва гепатология",
-         titleTjk: "гастроэнторология ва гепатология",
+         ru: "гастроэнторология ва гепатология",
+         uz: "gastroenterologiya va gepatologiya",
+         tjk: "гастроэнторология ва гепатология",
       },
       {
          id: 3,
-         titleRu: "физиотерапия",
-         titleUz: "физиотерапия",
-         titleTjk: "физиотерапия",
+         ru: "физиотерапия",
+         uz: "fizioterapiya",
+         tjk: "физиотерапия",
       },
       {
          id: 4,
-         titleRu: "урология",
-         titleUz: "урология",
-         titleTjk: "урология",
+         ru: "урология",
+         uz: "urologiya",
+         tjk: "урология",
       },
       {
          id: 5,
-         titleRu: "урология",
-         titleUz: "урология",
-         titleTjk: "урология",
+         ru: "офтальмология",
+         uz: "oftalmologiya",
+         tjk: "офтальмология",
       },
       {
          id: 6,
-         titleRu: "офтальмология",
-         titleUz: "офтальмология",
-         titleTjk: "офтальмология",
+         ru: "лор",
+         uz: "lor",
+         tjk: "лор",
       },
       {
          id: 7,
-         titleRu: "лор",
-         titleUz: "лор",
-         titleTjk: "лор",
+         ru: "бепуштлик ва дисфункцияни даволаш.",
+         uz: "bepushtlik va disfunktsiyani davolash.",
+         tjk: "бепуштлик ва дисфункцияни даволаш.",
       },
       {
          id: 8,
-         titleRu: "бепуштлик ва дисфункцияни даволаш.",
-         titleUz: "бепуштлик ва дисфункцияни даволаш.",
-         titleTjk: "бепуштлик ва дисфункцияни даволаш.",
-      },
-      {
-         id: 8,
-         titleRu: "гинекология",
-         titleUz: "гинекология",
-         titleTjk: "гинекология",
+         ru: "гинекология",
+         uz: "ginekologiya",
+         tjk: "гинекология",
       },
    ];
 
    return (
       <section className="custom-contaner max-sm:px-0 pb-28 max-md:pb-14">
-         <div id="aboutUs" className="flex max-lg:flex-col items-center justify-between gap-16 max-xl:gap-10 py-14 px-20 max-xl:px-10 max-md:px-5 bg-[#E6F6FE]">
+         <div
+            id="aboutUs"
+            className="flex max-lg:flex-col items-center justify-between gap-16 max-xl:gap-10 py-14 px-20 max-xl:px-10 max-md:px-5 bg-[#E6F6FE]"
+         >
             <div className="flex w-2/5 max-lg:w-full min-h-[420px] max-sm:min-h-[320px]">
                <Image
                   className="w-auto h-auto object-cover rounded-lg"
@@ -99,7 +99,11 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                                  className="flex items-center gap-3 text-[18px] font-medium"
                               >
                                  <LuShieldCheck className="text-[16px] text-[#1376F8]" />
-                                 {item.titleRu}
+                                 {locale === "ru"
+                                    ? item.ru
+                                    : locale === "uz"
+                                    ? item.uz
+                                    : item.tjk}
                               </li>
                            );
                         })}
@@ -112,7 +116,11 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                                  className="flex items-center gap-3 text-[18px] font-medium"
                               >
                                  <LuShieldCheck className="text-[16px] text-[#1376F8]" />
-                                 {item.titleRu}
+                                 {locale === "ru"
+                                    ? item.ru
+                                    : locale === "uz"
+                                    ? item.uz
+                                    : item.tjk}{" "}
                               </li>
                            );
                         })}

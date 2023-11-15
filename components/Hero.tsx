@@ -48,10 +48,6 @@ const Hero: React.FC<HeroProps> = () => {
          img: "photo",
       },
       {
-         id: 9,
-         img: "photo",
-      },
-      {
          id: 10,
          img: "photo",
       },

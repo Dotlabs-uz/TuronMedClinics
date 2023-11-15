@@ -58,12 +58,6 @@ const doctors = [
       job: "Orthodontist",
    },
    {
-      id: 9,
-      img: "doctor",
-      name: "Alex",
-      job: "Orthodontist",
-   },
-   {
       id: 10,
       img: "doctor",
       name: "Alex",

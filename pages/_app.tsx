@@ -9,7 +9,7 @@ import TranslateContext from "@/context/useTranslate";
 export default function App({ Component, pageProps }: AppProps) {
    const router = useRouter();
    const { locale } = router;
-
+   
    const translation = locale === "uz" ? uz : locale === "ru" ? ru : tjk;
 
    return (
