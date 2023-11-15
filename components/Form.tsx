@@ -26,8 +26,19 @@ const Form: React.FC<FormProps> = () => {
    const URL = `https://api.telegram.org/bot6725539258:AAHu_pC-On2ktRIXbN_qs8sWXfI4oXaRAls/getUpdates`;
 
    const onSubmit: SubmitHandler<Inputs> = (data) => {
+      console.log(data);
+      const OBJ = `
+         Имя: ${data.firstName},
+         Фамилия: ${data.lastName},
+         Электронная почта: ${data.email},
+         Номер телефона: ${data.number},
+         Датa: ${data.date},
+         Сообщение: ${data.message}
+      `;
+
       axios.post(
-         `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=Hello%20from%20your%20new%20bot`
+         `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=${OBJ}`,
+         "r"
       );
    };
 
