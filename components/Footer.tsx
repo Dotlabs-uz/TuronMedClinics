@@ -1,52 +1,84 @@
-import { BsFacebook } from "react-icons/bs";
+import TranslateContext from "@/context/useTranslate";
+import { useContext } from "react";
+
 import { FiInstagram } from "react-icons/fi";
-import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
-import { BiLogoLinkedin } from "react-icons/bi";
+import { FaTelegramPlane } from "react-icons/fa";
+
+import Link from "next/link";
 
 interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
+   const translation: any = useContext(TranslateContext);
+
    return (
       <footer className="custom-contaner">
          <div className="footer">
             <div className="footer-top">
-               <div>
-                  <p className="logo">Logo</p>
+               <div className="">
+                  <div>
+                     <Link href="/" className="logo">
+                        Logo
+                     </Link>
+                  </div>
+                  <div id="contacts">
+                     <ul>
+                        <li className="text-2xl font-semibold mt-5">
+                           <a href="tel:+998(55)703-03-03">+998(55)703-03-03</a>
+                        </li>
+                        <li className="text-2xl font-semibold mt-2">
+                           <a href="tel:+998(55)703-03-04">+998(55)703-03-04</a>
+                        </li>
+                        <li className="text-lg">
+                           {translation.footer.location}
+                        </li>
+                     </ul>
+                  </div>
                </div>
                <nav>
                   <ul>
-                     <li>Home</li>
-                     <li>Services</li>
-                     <li>Blogs</li>
-                     <li>About</li>
-                     <li>Contact</li>
+                     <li>
+                        <Link href={"#specialists"}>
+                           {translation?.nav?.specialists}
+                        </Link>
+                     </li>
+                     <li>
+                        <Link href={"#aboutUs"}>{translation.nav.AboutUs}</Link>
+                     </li>
+                     <li>
+                        <Link href={"#FAQ"}>{translation.nav.FAQ}</Link>
+                     </li>
+                     <li>
+                        <Link href={"#cotegoris"}>
+                           {translation.nav.Cotegoris}
+                        </Link>
+                     </li>
+                     <li>
+                        <Link href={"#contacts"}>
+                           {translation.nav.contact}
+                        </Link>
+                     </li>
                   </ul>
                </nav>
             </div>
             <hr />
             <div className="footer-bottom">
                <div>
-                  <p>
-                     All rights reserved ® uifry.com | Terms and conditions
-                     apply!
-                  </p>
+                  <p>{translation.footer.uifry}</p>
                </div>
                <div>
                   <ul className="social">
-                     <li className="">
-                        <BsFacebook className="icon" />
-                     </li>
-                     <li>
-                        <FiInstagram className="icon" />
-                     </li>
-                     <li>
-                        <AiFillYoutube className="icon" />
-                     </li>
-                     <li>
-                        <BiLogoLinkedin className="icon" />
-                     </li>
-                     <li>
-                        <AiOutlineTwitter className="icon" />
-                     </li>
+                     <Link
+                        href={"https://www.instagram.com/turon.med.premium/"}
+                     >
+                        <li>
+                           <FiInstagram className="icon" />
+                        </li>
+                     </Link>
+                     <Link className="link" href={"t.me/turonmedpremium"}>
+                        <li>
+                           <FaTelegramPlane className="icon" />
+                        </li>
+                     </Link>
                   </ul>
                </div>
             </div>

@@ -1,10 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import TranslateContext from "@/context/useTranslate";
+import { useState, useContext } from "react";
+
 import "swiper/css";
-import { useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
 
 interface ReviewsProps {}
 const Reviews: React.FC<ReviewsProps> = () => {
+   const translation: any = useContext(TranslateContext);
+
    const [swiperRef, setSwiperRef] = useState<any>(null);
    const prevHandler = () => {
       swiperRef.slidePrev();

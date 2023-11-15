@@ -3,11 +3,11 @@
       @apply flex max-sm:flex-col items-center justify-between py-14 max-md:py-7;
 
       .logo {
-         @apply max-sm:mb-5 text-3xl max-lg:text-2xl font-bold;
+         @apply max-sm:mb-5 text-3xl max-lg:text-2xl font-black;
       }
 
       nav ul {
-         @apply flex max-sm:flex-col items-center gap-10 max-md:gap-5 max-sm:gap-3;
+         @apply flex max-sm:flex-col items-center gap-10 max-md:gap-5 max-sm:gap-3 max-md:mt-5;
 
          li {
             @apply max-sm:text-sm font-medium tracking-[0.24px] cursor-pointer text-[#3C4959];

@@ -9,7 +9,7 @@
       @apply flex items-center gap-7 max-lg:gap-5  max-sm:w-full max-sm:absolute top-0 left-0 max-sm:flex-col max-sm:hidden;
 
       li {
-         @apply font-medium hover:font-semibold tracking-[0.24px] cursor-pointer duration-150 ease-in;
+         @apply font-medium hover:underline underline-offset-2 tracking-[0.24px] cursor-pointer duration-150 ease-in;
       }
    }
 

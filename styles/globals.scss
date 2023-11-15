@@ -15,6 +15,19 @@
 @import "/styles/welcoming.scss";
 @import "/styles/specialists.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
 body {
   font-family: "generalSans", sans-serif;
   color: #011632;

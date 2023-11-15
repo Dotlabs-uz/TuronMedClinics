@@ -21,6 +21,7 @@ const Cotegoris: React.FC<CotegorisProps> = () => {
       <section className="custom-contaner pb-40 max-md:pb-24 max-sm:px-0">
          <div className="py-10 px-9 max-sm:px-5 rounded-lg bg-[#E6F6FE]">
             <Swiper
+               id="cotegoris"
                onSwiper={(swiper) => setSwiperRef(swiper)}
                spaceBetween={30}
                slidesPerView={3}

@@ -10,8 +10,10 @@ import { Inter } from "next/font/google";
 import Specialists from "@/components/Specialists";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
+import Form from "@/components/Form";
+import Promo from "@/components/Promo";
 const inter = Inter({ subsets: ["latin"] });
-
+   
 export default function Home() {
    return (
       <>
@@ -26,6 +28,8 @@ export default function Home() {
             <Specialists />
             <Reviews />
             <FAQ />
+            <Form />
+            <Promo />
          </main>
          <Footer />
       </>

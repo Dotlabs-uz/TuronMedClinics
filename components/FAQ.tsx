@@ -1,30 +1,52 @@
+import TranslateContext from "@/context/useTranslate";
+import { useContext } from "react";
+
+import type { CollapseProps } from "antd";
+import { Collapse } from "antd";
+
 import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
 
 interface FAQProps {}
 const FAQ: React.FC<FAQProps> = () => {
+   const translation: any = useContext(TranslateContext);
+
+   const items: CollapseProps["items"] = [
+      {
+         key: "1",
+         label: "This is panel header 1",
+         children:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi facilis quasi voluptatum maxime, incidunt fugiat dolorum autem omnis labore, expedita, natus nesciunt eos aliquam alias! Sed, esse. Porro, ipsum error.",
+      },
+      {
+         key: "2",
+         label: "This is panel header 2",
+         children:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi facilis quasi voluptatum maxime, incidunt fugiat dolorum autem omnis labore, expedita, natus nesciunt eos aliquam alias! Sed, esse. Porro, ipsum error.",
+      },
+      {
+         key: "3",
+         label: "This is panel header 3",
+         children:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi facilis quasi voluptatum maxime, incidunt fugiat dolorum autem omnis labore, expedita, natus nesciunt eos aliquam alias! Sed, esse. Porro, ipsum error.",
+      },
+   ];
+
    return (
-      <section className="custom-contaner">
-         <div className="">
-            <div className="max-w-lg m-auto mb-10">
-               <h2 className="sm:text-center">Frequently Ask Question </h2>
+      <section className="custom-contaner pb-28 max-md:pb-14">
+         <div id="FAQ">
+            <div className="max-w-lg m-auto mb-14">
+               <h2 className="sm:text-center">{translation.FAQ.title}</h2>
 
                <p className="px-6 max-lg:px-10 max-sm:p-0 text-[18px] max-md:text-[16px] tracking-[0.27px] sm:text-center leading-[155%] text-[#3C4959]">
-                  We use only the best quality materials on the market in order
-                  to provide the best products to our patients.
+                  {translation.FAQ.title2}
                </p>
             </div>
-
-            <div className="">
-               <div className="">
-                  <div className="">
-                     <div className="">
-                        <p>Can I see who reads my email campaigns?</p>
-                     </div>
-                     <div className="">
-                        <BiMinusCircle />
-                     </div>
-                  </div>
-               </div>
+            <div className="max-w-2xl m-auto">
+               <Collapse
+                  items={items}
+                  bordered={false}
+                  defaultActiveKey={["1"]}
+               />
             </div>
          </div>
       </section>
