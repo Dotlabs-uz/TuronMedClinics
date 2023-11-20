@@ -29,16 +29,14 @@ const Header: React.FC<HeaderProps> = () => {
    return (
       <header className="custom-contaner">
          <div className="header">
-            <div className="logo w-16">
-               <Link href={"/"}>
-                  <Image
-                     src={"/images/logo.png"}
-                     width={1000}
-                     height={1000}
-                     alt="logo"
-                  />
-               </Link>
-            </div>
+            <Link className="logo" href={"/"}>
+               <Image
+                  src={"/images/logo.png"}
+                  width={1000}
+                  height={1000}
+                  alt="logo"
+               />
+            </Link>
             <nav>
                <ul
                   className={`${
@@ -63,6 +61,11 @@ const Header: React.FC<HeaderProps> = () => {
                   </li>
                   <li onClick={() => setHide(false)}>
                      <Link href={"#contacts"}>{translation.nav.contact}</Link>
+                  </li>
+                  <li>
+                     <button className="py-3 px-5 rounded-lg max-md:block hidden text-white bg-[#197dff]">
+                        {translation.header.button}
+                     </button>
                   </li>
                   <li>
                      <button
