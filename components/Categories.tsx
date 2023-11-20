@@ -13,36 +13,35 @@ const Categories: React.FC<CategoriesProps> = () => {
    const arr = [
       {
          id: 0,
-         icon: "",
-         titleRu: "ТУЗ ГОРИ",
+         titleRu: "Соляная пещера",
          titleUz: "TUZ G'ORI",
-         titleTjk: "ТУЗ ГОРИ",
+         titleTjk: "Соляная пещера",
          ru: "Туз ғорида 40 минут давомида нафас олиш муолажаси сеанслари қуйидаги касалликларга шифо бўлади: Аллергия касалликлари, Астма касалликлари, Ўпка ва нафас олиш йўллари касалликлари, Псориаз, Асаб касалликлари,Бўғинлар касалликлари ва бошқалар. Ёш болалар учун ҳам ҳар томонлама фойдали ҳисобланади.",
          uz: "40-daqiqa uzluksiz nafas davolash sessiyasi kasalliklarga shifo: allergiya kasalliklari, astma kasalliklari, Bakka va nafas olish yo'llari kasalliklari, psoriaz, nevrologik kasalliklari, bohinlar kasalliklari va boshqalar. Har tomonlama foidali billanadi sifatida Yesh bolalar.",
          tjk: "Туз ғорида 40 минут давомида нафас олиш муолажаси сеанслари қуйидаги касалликларга шифо бўлади: Аллергия касалликлари, Астма касалликлари, Ўпка ва нафас олиш йўллари касалликлари, Псориаз, Асаб касалликлари,Бўғинлар касалликлари ва бошқалар. Ёш болалар учун ҳам ҳар томонлама фойдали ҳисобланади.",
+         img: "1",
       },
       {
          id: 1,
-         icon: "",
          titleRu: "йодированная морская соль",
          titleUz: "yodlangan dengiz tuzi",
          titleTjk: "йодированная морская соль",
          ru: "Остальные стены, потолок и пол покрыты йодированной морской солью.",
          uz: "Devorlarning qolgan qismlari, potolok va Pol yodlangan dengiz tuzi bilan qoplangan.",
          tjk: "Остальные стены, потолок и пол покрыты йодированной морской солью.",
+         img: "2",
       },
       {
          id: 2,
-         icon: "",
          titleRu: "специальный микронутриент",
-         titleUz: "maxsus iz elementlari",
+         titleUz: "maxsus elementlar",
          titleTjk: "специальный микронутриент",
          ru: "Под воздействием тепла эти плитки выделяют в воздух особые микроэлементы.",
          uz: "Issiqlik ta'sirida ushbu plitkalar havoga maxsus mikroelementlar ajratib chiqaradi.",
          tjk: "Под воздействием тепла эти плитки выделяют в воздух особые микроэлементы.",
+         img: "3",
       },
       {
-         icon: "",
          id: 3,
          titleRu: "Гималайский розовый",
          titleUz: "Gimolay pushti rang",
@@ -50,16 +49,17 @@ const Categories: React.FC<CategoriesProps> = () => {
          ru: "Галогениратор purcagichi каждого Бира сессда 40 мин, известный как Australian Keltirilgan специальный фармацевтик туз флагаларин purcab turadi. Дом епископов мавзолей балан длиннохвостый.",
          uz: "Australian Keltirilgan maxsus farmatsevtika Ace flagalarin purcab turadii sifatida tanilgan har bir bir sess 40 min purcagichi halogenerator. Yepiskoplar uyi balan maqbarasi uzun dumli.",
          tjk: "Галогениратор purcagichi каждого Бира сессда 40 мин, известный как Australian Keltirilgan специальный фармацевтик туз флагаларин purcab turadi. Дом епископов мавзолей балан длиннохвостый.",
+         img: "4",
       },
       {
          id: 4,
-         icon: "",
-         titleRu: "ТУЗ ГОРИ",
+         titleRu: "специальный микронутриент",
          titleUz: "TUZ G'ORI",
-         titleTjk: "ТУЗ ГОРИ",
+         titleTjk: "специальный микронутриент",
          ru: "Это также полезно во всех отношениях для маленьких детей.",
          uz: "Yosh bolalar uchun ham har tomonlama foydali hisoblanadi.",
          tjk: "Это также полезно во всех отношениях для маленьких детей.",
+         img: "1",
       },
    ];
 
@@ -74,46 +74,6 @@ const Categories: React.FC<CategoriesProps> = () => {
    return (
       <section className="custom-contaner categories pb-28 max-md:pb-14 p-none">
          <div className="py-10 px-9 max-sm:px-5 rounded-lg bg-[#E6F6FE]">
-            <Swiper
-               className="mb-10 max-sm:mb-5"
-               onSwiper={(swiper) => setSwiperRef(swiper)}
-               autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-               }}
-               loop
-               modules={[Autoplay]}
-               spaceBetween={30}
-               slidesPerView={4}
-               breakpoints={{
-                  0: {
-                     slidesPerView: 1,
-                  },
-                  768: {
-                     slidesPerView: 2,
-                  },
-                  1280: {
-                     slidesPerView: 3,
-                  },
-               }}
-            >
-               {[1, 2, 3, 4].map((item: any) => {
-                  return (
-                     <SwiperSlide key={item} className="">
-                        <div className="h-full flex">
-                           <Image
-                              className="object-cover h-[300px]"
-                              src={`/images/salt/photo-${item}.jpg`}
-                              width={1000}
-                              height={1000}
-                              alt="salt"
-                           />
-                        </div>
-                     </SwiperSlide>
-                  );
-               })}
-            </Swiper>
-
             <Swiper
                id="cotegoris"
                onSwiper={(swiper) => setSwiperRef(swiper)}

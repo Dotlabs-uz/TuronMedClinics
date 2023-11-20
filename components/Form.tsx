@@ -102,7 +102,7 @@ const Form: React.FC<FormProps> = () => {
                            {...register("firstName", { required: true })}
                            id="first"
                            type="text"
-                           placeholder="First name"
+                           placeholder={translation.form.firstName}
                            className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
                         />
                         {errors.firstName && (
@@ -120,7 +120,7 @@ const Form: React.FC<FormProps> = () => {
                            {...register("lastName", { required: true })}
                            id="last"
                            type="text"
-                           placeholder="Last name"
+                           placeholder={translation.form.lastName}
                            className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
                         />
                         {errors.firstName && (

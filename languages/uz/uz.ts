@@ -2,9 +2,9 @@ const uz = {
    nav: {
       AboutUs: "Biz haqimizda",
       specialists: "Mutaxassislar",
-      FAQ: "savollar",
-      Cotegoris: "Kategoriyalar",
-      contact: "aloqa",
+      FAQ: "Savollar",
+      Cotegoris: "Tuz g'ori",
+      contact: "Aloqa",
    },
    header: {
       button: "Uchrashuvni belgilang",
@@ -25,6 +25,7 @@ const uz = {
       title: "Yukori sifatli raqamli rentgen apparati diagnostikasi.",
       text: "Turon asal premium klinikalari viloyat tajribali vrachlar va eng sungi avlod jixozlar maskani.",
       button: "Uchrashuvni belgilang",
+      placeholder: "Telefon raqamingizni kiriting",
    },
    about: {
       title: "Tajribali shifokorlar va zamonaviy texnologiyalar markazi",
@@ -104,8 +105,8 @@ const uz = {
       button: "Batafsil",
    },
    footer: {
-      location: "Самарканд шаҳри, Бўстонсарой кўчаси 28-уй.",
-      uifry: "Барча ҳуқуқлар ҳимояланган ® uifry.com | шартлари ва шартлар амал!",
+      location: "Samarkand shahri, Bo'stonsaroy ko'chasi 28-uy.",
+      uifry: "Barcha huquqlar himoyalangan ® uifry.com | shartlari va shartlar amal!",
    },
 };
 

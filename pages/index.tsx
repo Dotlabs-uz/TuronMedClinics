@@ -27,6 +27,7 @@ export default function Home() {
          title: translation.welcoming.consultation,
          text: translation.welcoming.title2,
          button: translation.welcoming.submit,
+         placeholder: translation.welcoming.placeholder,
          img: "160A2400",
          hide: true,
       },
@@ -35,6 +36,7 @@ export default function Home() {
          title: translation.welcoming.title,
          text: translation.welcoming.text,
          button: translation.welcoming.button,
+         placeholder: translation.welcoming.placeholder,
          img: "160A2427",
          hide: false,
       },
@@ -45,7 +47,6 @@ export default function Home() {
          <Header />
          <main className="">
             <Hero />
-            <Categories />
             <section className="custom-contaner">
                <div className="mb-28 max-md:mb-14">
                   <Image
@@ -57,6 +58,7 @@ export default function Home() {
                   />
                </div>
             </section>
+            <Categories />
             {arr.slice(0, 1).map((item) => (
                <Welcoming item={item} key={item.id} />
             ))}
@@ -66,7 +68,7 @@ export default function Home() {
             ))}
             <Video />
             <Specialists />
-            <Reviews />
+            {/* <Reviews /> */}
             <FAQ />
             <Form />
             <Promo />

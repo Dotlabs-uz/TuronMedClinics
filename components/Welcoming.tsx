@@ -81,7 +81,7 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
                         pattern: /[0-9]{7}$/,
                      })}
                      type="text"
-                     placeholder="Enter your Phone Number"
+                     placeholder={item.placeholder}
                   />
                   <button className="px-8 py-3 font-semibold tracking-[0.24px] rounded-r-lg border duration-150 ease-in border-[#1376F8] hover:border-[#3f94fb] bg-[#1376F8] hover:bg-[#3f94fb] text-white">
                      {item.button}

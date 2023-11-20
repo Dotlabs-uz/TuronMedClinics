@@ -12,97 +12,113 @@ const doctors = [
    {
       id: 1,
       img: "doctor",
-      name: "Насиба",
+      firstName: "Насиба",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 2,
       img: "doctor",
-      name: "Шавкат ",
+      firstName: "Шавкат ",
+      lastName: "Хакимов",
       job: "Orthodontist",
    },
    {
       id: 3,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 4,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 5,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 6,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 7,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 8,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 10,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 11,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 12,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 13,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 14,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 15,
       img: "doctor",
-      name: "Alex",
+      firstName: "Alex",
+      lastName: "Абдурахимова",
       job: "Orthodontist",
    },
    {
       id: 16,
       img: "doctor",
-      name: "Диёра",
+      firstName: "Диёра",
+      lastName: "Саидова",
       job: "Orthodontist",
    },
    {
       id: 17,
       img: "doctor",
-      name: "Суннатилло",
+      firstName: "Суннатилло",
+      lastName: "Хамидов",
       job: "Orthodontist",
    },
 ];
@@ -169,8 +185,10 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                            className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
                         >
                            <div className="block-name backdrop-blur-3xl rounded-lg w-full mt-auto px-6 py-3">
-                              <p className="text-[24px] text-ellipsis font-semibold text-[#011632]">
-                                 {item.name}
+                              <p className="text-[22px] text-ellipsis font-semibold text-[#011632]">
+                                 {item.firstName}
+                                 <br />
+                                 {item.lastName}
                               </p>
                               <p className="text-gray-600">{item.job}.</p>
                            </div>
