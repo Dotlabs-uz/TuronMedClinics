@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = () => {
          <div className="footer">
             <div className="footer-top">
                <div className="">
-                  <div className="logo w-32 max-sm:w-2/4">
+                  <div className="logo w-20">
                      <Image
                         src={"/images/logo.png"}
                         width={1000}

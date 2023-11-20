@@ -29,13 +29,15 @@ const Header: React.FC<HeaderProps> = () => {
    return (
       <header className="custom-contaner">
          <div className="header">
-            <div className="logo w-32 max-sm:w-24">
-               <Image
-                  src={"/images/logo.png"}
-                  width={1000}
-                  height={1000}
-                  alt="logo"
-               />
+            <div className="logo w-16">
+               <Link href={"/"}>
+                  <Image
+                     src={"/images/logo.png"}
+                     width={1000}
+                     height={1000}
+                     alt="logo"
+                  />
+               </Link>
             </div>
             <nav>
                <ul
