@@ -67,10 +67,6 @@ const Form: React.FC<FormProps> = () => {
          <div className="custom-contaner">
             <div className="max-w-2xl m-auto mb-10">
                <h2 className="sm:text-center">{translation.form.title}</h2>
-
-               <p className="px-20 max-lg:px-10 max-sm:p-0 text-[18px] max-md:text-[16px] max-sm:text-[18px] tracking-[0.27px] sm:text-center leading-[155%] text-[#3C4959]">
-                  {translation.form.title2}
-               </p>
             </div>
             <div className="flex max-lg:flex-col gap-9">
                <div className="w-full flex flex-col gap-5">
@@ -79,38 +75,17 @@ const Form: React.FC<FormProps> = () => {
                         className="w-full min-h-[320px] rounded-lg"
                         src="https://yandex.uz/map-widget/v1/?ll=67.042036%2C39.649422&z=11.83"
                      ></iframe>
-                     <div className="w-full absolute bottom-0 left-0 flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
-                        <div className="w-12 h-12 rounded-full bg-[#1376F8]"></div>
-                        <div className="max-w-[260px]">
-                           <p className="text-[18px] font-medium leading-[155%]">
-                              Office Timings
-                           </p>
-                           <p>
-                              Monday - Saturday (9:00am to 5pm) Sunday (Closed)
-                           </p>
-                        </div>
-                     </div>
                   </div>
 
-                  {[0, 1, 2, 3].map((item: number) => {
-                     return (
-                        <div
-                           key={item}
-                           className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white"
-                        >
-                           <div className="w-12 h-12 rounded-full bg-[#1376F8]"></div>
-                           <div className="max-w-[260px]">
-                              <p className="text-[18px] font-medium leading-[155%]">
-                                 Office Timings
-                              </p>
-                              <p>
-                                 Monday - Saturday (9:00am to 5pm) Sunday
-                                 (Closed)
-                              </p>
-                           </div>
-                        </div>
-                     );
-                  })}
+                  <div className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
+                     <div className="w-12 h-12 rounded-full bg-[#1376F8]"></div>
+                     <div className="max-w-[260px]">
+                        <p className="text-[18px] font-medium leading-[155%]">
+                           Office Timings
+                        </p>
+                        <p>Monday - Saturday (9:00am to 5pm) Sunday (Closed)</p>
+                     </div>
+                  </div>
                </div>
 
                <form

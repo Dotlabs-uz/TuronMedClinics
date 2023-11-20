@@ -22,11 +22,6 @@ const Reviews: React.FC<ReviewsProps> = () => {
          <div className="custom-contaner">
             <div className="max-w-2xl m-auto mb-10">
                <h2 className="sm:text-center">{translation.reviews.title}</h2>
-
-               <p className="px-20 max-lg:px-10 max-sm:p-0 text-[18px] max-md:text-[16px] max-sm:text-[18px] tracking-[0.27px] sm:text-center leading-[155%] text-[#3C4959]">
-                  We use only the best quality materials on the market in order
-                  to provide the best products to our patients.
-               </p>
             </div>
 
             <Swiper
@@ -49,7 +44,7 @@ const Reviews: React.FC<ReviewsProps> = () => {
                {[0, 1, 2, 3, 4, 5].map((item: number) => {
                   return (
                      <SwiperSlide key={item}>
-                        <div className="px-8 py-6 shadow-[0px_10px_40px_#00000014] rounded-lg">
+                        <div className="px-8 py-6 shadow-[0px_10px_40px_#00000014] rounded-lg hover:-translate-y-2 duration-100 ease-in">
                            <div className="flex items-center gap-2 mb-3">
                               <div className="w-16 h-16 rounded-full bg-slate-400"></div>
                               <div className="">

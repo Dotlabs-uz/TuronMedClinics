@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 
 import { LuShieldCheck } from "react-icons/lu";
+import Link from "next/link";
 
 interface AboutUsProps {}
 
@@ -70,7 +71,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
    ];
 
    return (
-      <section className="custom-contaner max-sm:px-0 pb-28 max-md:pb-14">
+      <section className="custom-contaner pb-28 max-md:pb-14 p-none">
          <div
             id="aboutUs"
             className="flex max-lg:flex-col items-center justify-between gap-16 max-xl:gap-10 py-14 px-20 max-xl:px-10 max-md:px-5 bg-[#E6F6FE]"
@@ -120,15 +121,17 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                                     ? item.ru
                                     : locale === "uz"
                                     ? item.uz
-                                    : item.tjk}{" "}
+                                    : item.tjk}
                               </li>
                            );
                         })}
                      </ul>
                   </div>
-                  <button className="mt-8 max-lg:text-[14px] max-sm:text-base mr-5 max-lg:mr-3 px-8 max-sm:px-4 max-md:px-6 py-4 max-lg:py-3 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
-                     {translation.about.button}
-                  </button>
+                  <Link href={"#toBook"}>
+                     <button className="mt-8 max-lg:text-[14px] max-sm:text-base mr-5 max-lg:mr-3 px-8 max-sm:px-4 max-md:px-6 py-4 max-lg:py-3 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
+                        {translation.about.button}
+                     </button>
+                  </Link>
                </div>
             </div>
          </div>

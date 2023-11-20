@@ -7,13 +7,13 @@ const ru = {
       contact: "контакт",
    },
    header: {
-      button: "Book Now",
+      button: "Назначьте встречу",
    },
    hero: {
       title: "Многопрофильный медицинский центр «Турон Мед Премиум».",
       title2:
          "Кардиология, терапия, неврология, эндокринология, офтальмология, урология ва андрология, гинекология, бепуштлик ва эркаклар дисфункциясини даволаш, физиотерапия, аллергик касалликлар, стоматология, гепатология, ЛОР, иглотерапия ва бошқалар",
-      button: "Book an appointment",
+      button: "Назначьте встречу",
       text: "Dental 24H Emergency",
    },
    welcoming: {
@@ -29,7 +29,7 @@ const ru = {
       title: "Центр опытных врачей и современных технологий",
       title2:
          "Наша недавно открывшаяся клиника в центре города Самарканд предоставляет следующие медицинские услуги и обследования:",
-      button: "Book an appointment",
+      button: "Назначьте встречу",
 
       services: [
          {
@@ -68,7 +68,7 @@ const ru = {
       title: "We’re welcoming new patients and can’t wait to meet you.",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
-      button: "Watch Playlist",
+      button: "посмотреть видео",
    },
    specialists: {
       title: "Познакомьтесь с нашими экспертами",
@@ -86,7 +86,7 @@ const ru = {
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
    },
    form: {
-      title: "Meet our specialists",
+      title: "оставить свои данные",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
       firstName: "Имя",

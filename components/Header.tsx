@@ -63,9 +63,11 @@ const Header: React.FC<HeaderProps> = () => {
                      <Link href={"#contacts"}>{translation.nav.contact}</Link>
                   </li>
                   <li>
-                     <button className="py-3 px-5 rounded-lg max-md:block hidden text-white bg-[#197dff]">
-                        {translation.header.button}
-                     </button>
+                     <Link onClick={() => setHide(false)} href={"#toBook"}>
+                        <button className="py-3 px-5 rounded-lg max-md:block hidden text-white bg-[#197dff]">
+                           {translation.header.button}
+                        </button>
+                     </Link>
                   </li>
                   <li>
                      <button
@@ -139,7 +141,11 @@ const Header: React.FC<HeaderProps> = () => {
                <button onClick={() => setHide(true)} className="btn-md">
                   <BiCategory size={24} />
                </button>
-               <button className="btn-pk">{translation.header.button}</button>
+               <Link href={"#toBook"}>
+                  <button className="btn-pk">
+                     {translation.header.button}
+                  </button>
+               </Link>
             </div>
          </div>
       </header>

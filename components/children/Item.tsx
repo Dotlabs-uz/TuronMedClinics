@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-import { FaTooth } from "react-icons/fa";
-
 interface ItemProps {
    item: any;
 }
@@ -12,18 +10,16 @@ const Item: React.FC<ItemProps> = ({ item }) => {
    const { locale } = router;
    const [more, setMore] = useState(false);
 
+   console.log(locale);
+
    return (
       <div className="min-h-[350px] flex flex-col gap-5 items-center justify-between rounded-lg px-10 max-md:px-5 py-8 bg-white">
          <div className="flex flex-col items-center">
-            <div className="w-fit p-2 rounded-full bg-[#25B4F8]">
-               <FaTooth className="text-white text-[40px]" />
-            </div>
             <div className="">
                <h3 className="my-2 text-[22px] font-medium text-center">
-                  {item.titleRu}
-                  {locale === "ru"
+                  {locale == "ru"
                      ? item.titleRu
-                     : locale === "uz"
+                     : locale == "uz"
                      ? item.titleUz
                      : item.titleTjk}
                </h3>

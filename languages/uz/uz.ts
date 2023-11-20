@@ -7,13 +7,13 @@ const uz = {
       contact: "aloqa",
    },
    header: {
-      button: "Book Now",
+      button: "Uchrashuvni belgilang",
    },
    hero: {
-      title: "«Турон Мед Премиум» кўп тармоқли тиббий марказ.",
+      title: "«Turon Med Premium» ko'p tarmoqli tibbiy markaz.",
       title2:
          "Kardiologiya, terapiya, nevrologiya, endokrinologiya, oftalmologiya, urologiya va andrologiya, ginekologiya, bepushtlik va erkaklar disfunktsiyasini davolash, fizioterapiya, allergiya qilish, stomatologiya, gepatologiya, LOR, akupunktur va boshkalar",
-      button: "Book an appointment",
+      button: "Uchrashuvni belgilang",
       text: "Dental 24H Emergency",
    },
    welcoming: {
@@ -27,10 +27,10 @@ const uz = {
       button: "Uchrashuvni belgilang",
    },
    about: {
-      title: "Тажрибали шифокорлар ва замонавий технологиялар маркази",
+      title: "Tajribali shifokorlar va zamonaviy texnologiyalar markazi",
       title2:
-         "Самарканд шаҳрининг марказида янгидан очилган клиникамизда қуйидаги тиббий хизматлар ва текширишлар кўрсатилади:",
-      button: "Book an appointment",
+         "Samarkand shahrining markazida yangidan ochilgan klinikamizda quyidagi tibbiy xizmatlar va tekshirishlar ko'rsatiladi:",
+      button: "Uchrashuvni belgilang",
 
       services: [
          {
@@ -69,12 +69,12 @@ const uz = {
       title: "We’re welcoming new patients and can’t wait to meet you.",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
-      button: "Watch Playlist",
+      button: "videoni ko'rish",
    },
    specialists: {
       title: "Mutaxassislarimiz bilan tanishing",
-      info: "Ушбу тажрибали мутахассислар Европа стандартларидаги тиббий аппаратлар билан амбулатор ва 60 ўринли замонавий стационарда даволаш ва профилактика ишларини олиб боришади.",
-      text: "Соғлигингиз бебаҳо - уни бизга ишонинг!",
+      info: "Hozirgi vaqtda Evropada tez yordam tibbiy asbob-uskunalari va 60 simulyatorli shifoxona va profilaktika uskunalarini ekspert tayyorlash ishlari olib borilmoqda.",
+      text: "Sogligingize bebaho - uni bizga ishoning!",
    },
    reviews: {
       title: "bizning sharhlarimiz",
@@ -87,7 +87,7 @@ const uz = {
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
    },
    form: {
-      title: "Meet our specialists",
+      title: "ma'lumotlaringizni qoldiring",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
       firstName: "Ism",

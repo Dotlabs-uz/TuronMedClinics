@@ -36,10 +36,6 @@ const FAQ: React.FC<FAQProps> = () => {
          <div id="FAQ">
             <div className="max-w-lg m-auto mb-14">
                <h2 className="sm:text-center">{translation.FAQ.title}</h2>
-
-               <p className="px-6 max-lg:px-10 max-sm:p-0 text-[18px] max-md:text-[16px] tracking-[0.27px] sm:text-center leading-[155%] text-[#3C4959]">
-                  {translation.FAQ.title2}
-               </p>
             </div>
             <div className="max-w-2xl m-auto">
                <Collapse

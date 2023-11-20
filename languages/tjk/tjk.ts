@@ -7,7 +7,7 @@ const tjk = {
       contact: "контакт",
    },
    header: {
-      button: "Book Now",
+      button: "Назначьте встречу",
    },
    hero: {
       title: "Многопрофильный медицинский центр «Турон Мед Премиум».",
@@ -69,7 +69,7 @@ const tjk = {
       title: "We’re welcoming new patients and can’t wait to meet you.",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
-      button: "Watch Playlist",
+      button: "посмотреть видео",
    },
    specialists: {
       title: "Познакомьтесь с нашими экспертами",

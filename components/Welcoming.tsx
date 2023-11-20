@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 import { BsTelephone } from "react-icons/bs";
 import axios from "axios";
+import Link from "next/link";
 
 interface WelcomingProps {
    item: any;
@@ -51,7 +52,10 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
    }, [isSubmitSuccessful]);
 
    return (
-      <section className="custom-contaner flex max-md:flex-col items-center justify-between gap-20 max-md:gap-10 pb-28 max-md:pb-14">
+      <section
+         id={item.hide ? "toBook" : ""}
+         className="custom-contaner flex max-md:flex-col items-center justify-between gap-20 max-md:gap-10 pb-28 max-md:pb-14"
+      >
          <div className="w-1/2 max-md:w-full">
             <h2>{item.title}</h2>
 
@@ -79,21 +83,23 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
                      type="text"
                      placeholder="Enter your Phone Number"
                   />
-                  <button className="px-8 py-3 font-semibold tracking-[0.24px] rounded-r-lg border border-[#1376F8] bg-[#1376F8] text-white">
+                  <button className="px-8 py-3 font-semibold tracking-[0.24px] rounded-r-lg border duration-150 ease-in border-[#1376F8] hover:border-[#3f94fb] bg-[#1376F8] hover:bg-[#3f94fb] text-white">
                      {item.button}
                   </button>
                </form>
             ) : (
-               <button className="px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
-                  {item.button}
-               </button>
+               <Link href={"toBook"}>
+                  <button className="px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
+                     {item.button}
+                  </button>
+               </Link>
             )}
          </div>
 
          <div className="block-img flex relative max-w-[400px] min-h-[350px] max-md:min-h-[350px] mr-10 max-md:mr-5">
             <Image
                className="max-w-[450px] min-h-[350px] max-xl:max-w-[350px] max-sm:min-h-[330px] w-full object-cover rounded-lg mt-auto"
-               src={"/images/160A2400.jpg"}
+               src={`/images/${item.img}.jpg`}
                width={1000}
                height={1000}
                alt="photo"

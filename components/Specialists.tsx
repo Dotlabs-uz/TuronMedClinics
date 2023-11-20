@@ -6,18 +6,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUp } from "react-icons/bs";
+import Image from "next/image";
 
 const doctors = [
    {
       id: 1,
       img: "doctor",
-      name: "Абдурахимова Насиба Юсуповна",
+      name: "Насиба",
       job: "Orthodontist",
    },
    {
       id: 2,
       img: "doctor",
-      name: "Хакимов Шавкат Нормухаммедович",
+      name: "Шавкат ",
       job: "Orthodontist",
    },
    {
@@ -95,13 +96,13 @@ const doctors = [
    {
       id: 16,
       img: "doctor",
-      name: "Саидова Диёра Наимовна",
+      name: "Диёра",
       job: "Orthodontist",
    },
    {
       id: 17,
       img: "doctor",
-      name: "Хамидов Суннатилло",
+      name: "Суннатилло",
       job: "Orthodontist",
    },
 ];
@@ -158,7 +159,7 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                {doctors.map((item: any) => {
                   return (
                      <SwiperSlide
-                        className="bg-blue-200 pt-5 rounded-lg"
+                        className="bg-blue-200 pt-5 rounded-lg hover:-translate-y-2 duration-100 ease-in"
                         key={item.id}
                      >
                         <div
@@ -168,7 +169,7 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                            className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
                         >
                            <div className="block-name backdrop-blur-3xl rounded-lg w-full mt-auto px-6 py-3">
-                              <p className="text-[24px] font-semibold text-gray-600">
+                              <p className="text-[24px] text-ellipsis font-semibold text-[#011632]">
                                  {item.name}
                               </p>
                               <p className="text-gray-600">{item.job}.</p>

@@ -10,6 +10,7 @@ import "swiper/css/effect-fade";
 
 import { FaPhoneVolume } from "react-icons/fa6";
 import axios from "axios";
+import Link from "next/link";
 
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
@@ -94,7 +95,9 @@ const Hero: React.FC<HeroProps> = () => {
 
             <div className="conect">
                <div className="btns">
-                  <button className="btn">{translation.hero.button}</button>
+                  <Link href={"toBook"}>
+                     <button className="btn">{translation.hero.button}</button>
+                  </Link>
                   <a href="tel:+998(55)703-03-03">
                      <button className="phone">
                         <FaPhoneVolume className="icon" />

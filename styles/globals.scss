@@ -41,6 +41,10 @@ body {
     @apply max-w-[1440px] w-full m-auto px-20 max-xl:px-10 max-lg:px-5;
   }
 
+  .p-none {
+    @apply max-md:px-0;
+  }
+
   h2 {
     @apply mb-5 text-[42px] max-lg:text-[36px] max-md:text-[32px] max-sm:text-[36px] font-semibold leading-[125%];
   }

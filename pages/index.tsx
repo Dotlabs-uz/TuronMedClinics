@@ -15,6 +15,7 @@ import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 
 import { Inter } from "next/font/google";
+import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -26,15 +27,15 @@ export default function Home() {
          title: translation.welcoming.consultation,
          text: translation.welcoming.title2,
          button: translation.welcoming.submit,
-         img: "",
+         img: "160A2400",
          hide: true,
       },
       {
-         id: 0,
+         id: 1,
          title: translation.welcoming.title,
          text: translation.welcoming.text,
          button: translation.welcoming.button,
-         img: "",
+         img: "160A2427",
          hide: false,
       },
    ];
@@ -45,6 +46,17 @@ export default function Home() {
          <main className="">
             <Hero />
             <Categories />
+            <section className="custom-contaner">
+               <div className="mb-28 max-md:mb-14">
+                  <Image
+                     className="w-full h-full rounded-lg"
+                     src={"/images/all.jpg"}
+                     width={1000}
+                     height={1000}
+                     alt="doctors"
+                  />
+               </div>
+            </section>
             {arr.slice(0, 1).map((item) => (
                <Welcoming item={item} key={item.id} />
             ))}
