@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 
 import { BiCategory } from "react-icons/bi";
+import { IoClose } from "react-icons/io5";
 
 interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
@@ -28,7 +29,7 @@ const Header: React.FC<HeaderProps> = () => {
    return (
       <header className="custom-contaner">
          <div className="header">
-            <div className="logo w-32 max-sm:w-2/4">
+            <div className="logo w-32 max-sm:w-24">
                <Image
                   src={"/images/logo.png"}
                   width={1000}
@@ -40,7 +41,7 @@ const Header: React.FC<HeaderProps> = () => {
                <ul
                   className={`${
                      hide ? "flex" : "max-lg:hidden"
-                  } max-lg:w-full max-lg:h-full max-lg:p-5 flex max-lg:flex-col items-center max-lg:items-start gap-7 max-lg:gap-5 max-sm:w-full max-lg:fixed z-50 top-0 left-0 max-lg:backdrop-blur-md max-lg:bg-white/50`}
+                  } max-lg:w-full max-lg:h-full max-lg:p-5 flex max-lg:flex-col items-center max-lg:items-start gap-7 max-lg:pt-14 max-lg:gap-5 max-sm:w-full max-lg:fixed z-50 top-0 left-0 max-lg:backdrop-blur-md max-lg:bg-white/50`}
                >
                   <li onClick={() => setHide(false)}>
                      <Link href={"#specialists"}>
@@ -62,8 +63,11 @@ const Header: React.FC<HeaderProps> = () => {
                      <Link href={"#contacts"}>{translation.nav.contact}</Link>
                   </li>
                   <li>
-                     <button className="btn-pk">
-                        {translation.header.button}
+                     <button
+                        onClick={() => setHide(false)}
+                        className="absolute top-5 right-5 max-lg:block hidden"
+                     >
+                        <IoClose color="red" size={25} />
                      </button>
                   </li>
                </ul>

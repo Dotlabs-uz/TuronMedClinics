@@ -7,18 +7,17 @@ import "swiper/css";
 
 import { BsArrowUp } from "react-icons/bs";
 
-interface SpecialistsProps {}
 const doctors = [
    {
       id: 1,
       img: "doctor",
-      name: "Alex",
+      name: "Абдурахимова Насиба Юсуповна",
       job: "Orthodontist",
    },
    {
       id: 2,
       img: "doctor",
-      name: "Alex",
+      name: "Хакимов Шавкат Нормухаммедович",
       job: "Orthodontist",
    },
    {
@@ -96,16 +95,18 @@ const doctors = [
    {
       id: 16,
       img: "doctor",
-      name: "Alex",
+      name: "Саидова Диёра Наимовна",
       job: "Orthodontist",
    },
    {
       id: 17,
       img: "doctor",
-      name: "Alex",
+      name: "Хамидов Суннатилло",
       job: "Orthodontist",
    },
 ];
+
+interface SpecialistsProps {}
 const Specialists: React.FC<SpecialistsProps> = () => {
    const translation: any = useContext(TranslateContext);
 
@@ -116,6 +117,7 @@ const Specialists: React.FC<SpecialistsProps> = () => {
    const nextHandler = () => {
       swiperRef.slideNext();
    };
+
    return (
       <section className="bg-[#E6F6FE] py-16 overflow-hidden mb-28 max-md:mb-14">
          <div className="custom-contaner">
@@ -155,7 +157,10 @@ const Specialists: React.FC<SpecialistsProps> = () => {
             >
                {doctors.map((item: any) => {
                   return (
-                     <SwiperSlide key={item.id}>
+                     <SwiperSlide
+                        className="bg-blue-200 pt-5 rounded-lg"
+                        key={item.id}
+                     >
                         <div
                            style={{
                               backgroundImage: `url('/images/doctors/doctor-${item.id}.png')`,
@@ -163,10 +168,10 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                            className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
                         >
                            <div className="block-name backdrop-blur-3xl rounded-lg w-full mt-auto px-6 py-3">
-                              <p className="text-[24px] font-semibold text-white">
+                              <p className="text-[24px] font-semibold text-gray-600">
                                  {item.name}
                               </p>
-                              <p className="text-white">{item.job}.</p>
+                              <p className="text-gray-600">{item.job}.</p>
                            </div>
                         </div>
                      </SwiperSlide>

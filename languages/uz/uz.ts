@@ -17,7 +17,7 @@ const uz = {
       text: "Dental 24H Emergency",
    },
    welcoming: {
-      consultation: "arizani qoldiring",
+      consultation: "Arizangizni qoldiring",
       title2:
          "Bizning ma'murlarimiz sizga 30 daqiqa ichida qo'ng'iroq qilishadi",
       submit: "Yuborish",
@@ -77,7 +77,7 @@ const uz = {
       text: "Соғлигингиз бебаҳо - уни бизга ишонинг!",
    },
    reviews: {
-      title: "Meet our specialists",
+      title: "bizning sharhlarimiz",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
    },

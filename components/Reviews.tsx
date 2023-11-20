@@ -21,7 +21,7 @@ const Reviews: React.FC<ReviewsProps> = () => {
       <section className="overflow-hidden mb-28 max-md:mb-14">
          <div className="custom-contaner">
             <div className="max-w-2xl m-auto mb-10">
-               <h2 className="sm:text-center">Meet our specialists </h2>
+               <h2 className="sm:text-center">{translation.reviews.title}</h2>
 
                <p className="px-20 max-lg:px-10 max-sm:p-0 text-[18px] max-md:text-[16px] max-sm:text-[18px] tracking-[0.27px] sm:text-center leading-[155%] text-[#3C4959]">
                   We use only the best quality materials on the market in order

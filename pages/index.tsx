@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Cotegoris from "@/components/Cotegoris";
+import Categories from "@/components/Categories";
 import Welcoming from "@/components/Welcoming";
 import AboutUs from "@/components/AboutUs";
 import Video from "@/components/Vidoe";
@@ -44,7 +44,7 @@ export default function Home() {
          <Header />
          <main className="">
             <Hero />
-            <Cotegoris />
+            <Categories />
             {arr.slice(0, 1).map((item) => (
                <Welcoming item={item} key={item.id} />
             ))}

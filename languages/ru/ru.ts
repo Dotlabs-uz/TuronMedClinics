@@ -17,7 +17,7 @@ const ru = {
       text: "Dental 24H Emergency",
    },
    welcoming: {
-      consultation: "оставить заявку",
+      consultation: "Оставить заявку",
       title2: "Наши администраторы позвонят вам в течение 30 минут",
       submit: "Отправить",
 
@@ -49,7 +49,7 @@ const ru = {
          },
          {
             service: "урология",
-         }, 
+         },
          {
             service: "офтальмология",
          },
@@ -76,12 +76,12 @@ const ru = {
       text: "Ваше здоровье бесценно - доверьте его нам!",
    },
    reviews: {
-      title: "Meet our specialists",
+      title: "наши отзывы",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
    },
    FAQ: {
-      title: "Часто задаваемый вопрос",
+      title: "ответы на часто задаваемые вопросы",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
    },
