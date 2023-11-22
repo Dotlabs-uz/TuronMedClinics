@@ -3,6 +3,9 @@ import { useContext, useState, useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 
+import { CiClock2 } from "react-icons/ci";
+import { SlLocationPin } from "react-icons/sl";
+
 type Inputs = {
    firstName: string;
    lastName: string;
@@ -78,12 +81,26 @@ const Form: React.FC<FormProps> = () => {
                   </div>
 
                   <div className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
-                     <div className="w-12 h-12 rounded-full bg-[#1376F8]"></div>
-                     <div className="max-w-[260px]">
+                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1376F8]">
+                        <SlLocationPin color={"white"} size={27} />
+                     </div>
+                     <div className="">
                         <p className="text-[18px] font-medium leading-[155%]">
-                           Office Timings
+                           {translation.form.location}
                         </p>
-                        <p>Monday - Saturday (9:00am to 5pm) Sunday (Closed)</p>
+                        <p>{translation.form.locationOffice}</p>
+                     </div>
+                  </div>
+
+                  <div className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
+                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1376F8]">
+                        <CiClock2 color={"white"} size={27} />
+                     </div>
+                     <div className="">
+                        <p className="text-[18px] font-medium leading-[155%]">
+                           {translation.form.schedule}
+                        </p>
+                        <p>{translation.form.scheduleOffice}</p>
                      </div>
                   </div>
                </div>

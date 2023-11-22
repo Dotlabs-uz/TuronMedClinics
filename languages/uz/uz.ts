@@ -86,8 +86,39 @@ const uz = {
       title: "Tez-tez so'raladigan savol",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
+
+      question1: "Klinikangiz qayerda joylashgan?",
+      answer1: "Bustonsaroy koʻchasi 28-uy, IIB binosi roʻparasidagi belgi.",
+      question2: "Klinikangiz qanday xizmatlarni taqdim etadi? ",
+      answer2:
+         "Klinikamiz kardiologiya, terapiya, nevrologiya, ginekologiya, allergologiya, urologiya, endokrinologiya, stomatologiya, LOR, oftalmologiya, qon va siydikning barcha turdagi laboratoriya tekshiruvlari (klinik, biokimyoviy, ICH, IFA), ultratovush, dopplerologik diagnostika va davolash xizmatlarini taqdim etadi. , ekokardiyografi, KT, Eegholter monitoringi, raqamli rentgen , kolposkopiya, kriyodestruksiya, fizioterapiya, mashqlar bilan davolash, tuz g'ori. Ambulator va statsionar davolanish ko'rsatiladi.",
+      question3: "Statsionar davolanish narxi qancha?",
+      answer3:
+         "— Uch kishilik hashamatli xona bir kun — 300 ming. Ikki kishilik hashamatli xona — 390 ming. Bir kishilik hashamatli xona — 600 ming.",
+      question4: "To'lovga nima kiradi?",
+      answer4:
+         "- Kundalik tekshiruv. shifokor, mutaxassislar bilan maslahatlashish, kuniga 4 marta ovqatlanish, O'simlik dori-darmonlari, EKG, tuzli idish, yangi choyshablar va gigiena vositalari, tizim, shpritslar, fiziologik eritma, vitaminlar va tinchlantiruvchi vositalar.",
+      question5: "Sizda chegirmalar bormi?",
+      answer5:
+         "Ha, ultratovush tekshiruvi, laboratoriya diagnostikasi va fizioterapiya bo'yicha statsionar bemorlar uchun 10% chegirma mavjud.",
+      question6: "Sizda kunduzgi shifoxona bormi va narxlar qancha?",
+      answer6:
+         "Да дневной стационар имеется: Трёхместная палата один день- 200 тыс. Двухместная палата -220 тыс.",
+      question7: "Kunduzgi shifoxona uchun to'lovga nima kiradi?",
+      answer7:
+         "Yotish uchun kundalik tekshiruv. shifokor ‚ yangi choyshab va gigiena vositalari, keyin siz bilan birga olib, shprits ‚ tizimi, jismoniy. yechim, tushlik.",
+      question8: "Klinikangizning ish vaqti qanday?",
+      answer8:
+         "Klinika har kuni dushanbadan shanbagacha soat 8:00 dan 17:00 gacha Laboratoriya 7:30 dan 17:00 gacha ishlaydi. Yakshanba dam olish kuni.",
    },
    form: {
+      location: "Manzil",
+      locationOffice:
+         "Bustonsaroy koʻchasi 28-uy, IIB binosi roʻparasidagi belgi.",
+      schedule: "График работы",
+      scheduleOffice:
+         "Dushanba - Shanba (soat 8:00 dan 17:00 gacha) Yakshanba (yopiq)",
+
       title: "ma'lumotlaringizni qoldiring",
       title2:
          "We use only the best quality materials on the market in order to provide the best products to our patients.",
