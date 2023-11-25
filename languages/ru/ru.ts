@@ -3,7 +3,7 @@ const ru = {
       AboutUs: "О нас",
       specialists: "Специалисты",
       FAQ: "вопросы",
-      Cotegoris: "Категории",
+      Cotegoris: "Соляная пещера",
       contact: "контакт",
    },
    header: {

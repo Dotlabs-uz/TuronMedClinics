@@ -103,7 +103,7 @@ const uz = {
          "Ha, ultratovush tekshiruvi, laboratoriya diagnostikasi va fizioterapiya bo'yicha statsionar bemorlar uchun 10% chegirma mavjud.",
       question6: "Sizda kunduzgi shifoxona bormi va narxlar qancha?",
       answer6:
-         "Да дневной стационар имеется: Трёхместная палата один день- 200 тыс. Двухместная палата -220 тыс.",
+         "Ha, kunduzgi shifoxona bor: Bir kunlik uch yotoqli palata - 200 ming. Ikki kishilik xona -220 ming kv.m.",
       question7: "Kunduzgi shifoxona uchun to'lovga nima kiradi?",
       answer7:
          "Yotish uchun kundalik tekshiruv. shifokor ‚ yangi choyshab va gigiena vositalari, keyin siz bilan birga olib, shprits ‚ tizimi, jismoniy. yechim, tushlik.",

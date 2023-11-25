@@ -11,8 +11,6 @@ const Item: React.FC<ItemProps> = ({ item }) => {
    const { locale } = router;
    const [more, setMore] = useState(false);
 
-   console.log(locale);
-
    return (
       <div
          className={`min-h-[350px] flex flex-col gap-5 items-center justify-between rounded-lg overflow-hidden px-10 max-md:px-5 py-8 relative z-10`}
