@@ -66,9 +66,9 @@ const ru = {
       ],
    },
    video: {
-      title: "We’re welcoming new patients and can’t wait to meet you.",
+      title: "Опытные специалисты обеспечат вас заботой на каждом этапе лечения.",
       title2:
-         "We use only the best quality materials on the market in order to provide the best products to our patients.",
+         "Мы стремимся создать комфортное и доверительное окружение, чтобы вы могли чувствовать себя уверенно в том, что ваше здоровье находится в надежных руках. Наша миссия - ваше благополучие!",
       button: "посмотреть видео",
    },
    specialists: {

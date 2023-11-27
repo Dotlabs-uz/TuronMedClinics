@@ -67,9 +67,9 @@ const uz = {
       ],
    },
    video: {
-      title: "We’re welcoming new patients and can’t wait to meet you.",
+      title: "Tajribali mutaxassislar davolanishning har bir bosqichida sizga g'amxo'rlik qilishadi.",
       title2:
-         "We use only the best quality materials on the market in order to provide the best products to our patients.",
+         "Biz sizning sog'lig'ingiz ishonchli qo'llarda ekanligiga ishonchingiz komil bo'lishi uchun qulay va ishonchli muhit yaratishga intilamiz. Bizning vazifamiz sizning farovonligingizdir!",
       button: "videoni ko'rish",
    },
    specialists: {

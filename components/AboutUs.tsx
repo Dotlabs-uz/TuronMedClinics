@@ -28,9 +28,9 @@ const AboutUs: React.FC<AboutUsProps> = () => {
       },
       {
          id: 2,
-         ru: "гастроэнторология ва гепатология",
+         ru: "гастроэнтерология и гепатология",
          uz: "gastroenterologiya va gepatologiya",
-         tjk: "гастроэнторология ва гепатология",
+         tjk: "гастроэнтерология и гепатология",
       },
       {
          id: 3,
@@ -58,9 +58,9 @@ const AboutUs: React.FC<AboutUsProps> = () => {
       },
       {
          id: 7,
-         ru: "бепуштлик ва дисфункцияни даволаш.",
+         ru: "лечение бесплодия и дисфункции.",
          uz: "bepushtlik va disfunktsiyani davolash.",
-         tjk: "бепуштлик ва дисфункцияни даволаш.",
+         tjk: "лечение бесплодия и дисфункции.",
       },
       {
          id: 8,
