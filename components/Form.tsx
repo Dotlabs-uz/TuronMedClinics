@@ -1,6 +1,7 @@
 import TranslateContext from "@/context/useTranslate";
 import { useContext, useState, useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import InputMask from "react-input-mask";
 import axios from "axios";
 
 import { CiClock2 } from "react-icons/ci";
@@ -33,9 +34,7 @@ const Form: React.FC<FormProps> = () => {
    const onSubmit: SubmitHandler<Inputs> = (data) => {
       let OBJ = `Имя: ${data.firstName} \n`;
       OBJ += `Фамилия: ${data.lastName} \n`;
-      OBJ += `Электронная почта: ${data.email} \n`;
       OBJ += `Номер телефона: ${data.number} \n`;
-      OBJ += `Датa: ${data.date} \n`;
       OBJ += `Сообщение: ${data.message}`;
 
       setIsSubmitSuccessful(!isSubmitSuccessful);
@@ -57,9 +56,7 @@ const Form: React.FC<FormProps> = () => {
          reset({
             firstName: "",
             lastName: "",
-            email: "",
             number: "",
-            date: "",
             message: "",
          });
       }, 1000);
@@ -155,60 +152,28 @@ const Form: React.FC<FormProps> = () => {
                   </div>
 
                   <div className="w-full flex flex-col gap-5 mt-3">
-                     <label className="relative" htmlFor="email">
-                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
-                           {translation.form.email}
-                        </p>
-                        <input
-                           {...register("email", { required: true })}
-                           id="email"
-                           type="text"
-                           placeholder="you@company.com"
-                           className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
-                        />
-                        {errors.email && (
-                           <p className="absolute -bottom-5 left-2 text-sm text-red-600">
-                              Напишите свою электронную почту
-                           </p>
-                        )}
-                     </label>
                      <label className="relative" htmlFor="number">
                         <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.number}
                         </p>
-                        <input
+                        <InputMask
+                           mask="+\9\98(99)999-99-99"
+                           placeholder="+998(99)999-99-99"
+                           type="text"
+                           id="number"
+                           className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
                            {...register("number", {
                               required: true,
-                              pattern: /[0-9]{7}$/,
+                              pattern: /[0-9]/,
                            })}
-                           id="number"
-                           type="text"
-                           placeholder="+1 (555) 000-0000"
-                           className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
-                        />
+                        ></InputMask>
                         {errors.number && (
                            <p className="absolute -bottom-5 left-2 text-sm text-red-600">
                               Напишите свой номер
                            </p>
                         )}
                      </label>
-                     <label className="relative" htmlFor="date">
-                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
-                           {translation.form.date}
-                        </p>
-                        <input
-                           {...register("date", { required: true })}
-                           id="date"
-                           type="date"
-                           placeholder="December - 02-2022"
-                           className="w-full px-4 py-4 rounded-lg border-2 border-[#D0D5DD]"
-                        />
-                        {errors.date && (
-                           <p className="absolute -bottom-5 left-2 text-sm text-red-600">
-                              Выберите дату
-                           </p>
-                        )}
-                     </label>
+
                      <label className="relative" htmlFor="message">
                         <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.message}
