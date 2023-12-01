@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 import { BsTelephone } from "react-icons/bs";
 import axios from "axios";
@@ -70,20 +71,17 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
                   className="flex w-full relative"
                >
                   <BsTelephone className="absolute top-3 max-lg:top-4 left-5 max-lg:left-3 text-[24px] max-lg:text-[20px] pointer-events-none text-[#CFCFCF]" />
-                  <input
-                     style={
-                        errors.number
-                           ? { border: "1px solid red" }
-                           : { border: "1px solid #CECECE" }
-                     }
+                  <InputMask
+                     mask="+\9\98(99)999-99-99"
+                     type="text"
+                     placeholder={item.placeholder}
+                     id="number"
                      className="w-full max-lg:text-sm pl-14 max-lg:pl-10 py-3 max-lg:py-2 rounded-l-lg border border-[#CECECE] placeholder:text-[#CFCFCF] max-lg:placeholder:text-sm"
                      {...register("number", {
                         required: true,
-                        pattern: /[0-9]{7}$/,
+                        pattern: /[0-9]/,
                      })}
-                     type="text"
-                     placeholder={item.placeholder}
-                  />
+                  ></InputMask>
                   <button className="px-8 max-lg:px-4 py-3 max-lg:text-sm font-semibold tracking-[0.24px] rounded-r-lg border duration-150 ease-in border-[#1376F8] hover:border-[#3f94fb] bg-[#1376F8] hover:bg-[#3f94fb] text-white">
                      {item.button}
                   </button>
