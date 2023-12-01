@@ -87,15 +87,17 @@ const Hero: React.FC<HeroProps> = () => {
          <div className="hero-left">
             <div className="hero-left-texts">
                <h1>{translation.hero.title}</h1>
-
                <p className="max-w-lg w-full text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] leading-[135%] text-[#3C4959]">
                   {translation.hero.title2}
+               </p>
+               <p className="mt-1 text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] leading-[135%] text-[#3C4959]">
+                  {translation.hero.price}
                </p>
             </div>
 
             <div className="conect">
                <div className="btns">
-                  <Link href={"toBook"}>
+                  <Link href={"#toBook"}>
                      <button className="btn">{translation.hero.button}</button>
                   </Link>
                   <a href="tel:+998(55)703-03-03">
@@ -132,7 +134,7 @@ const Hero: React.FC<HeroProps> = () => {
                         <Image
                            priority
                            className="select-none pointer-events-none"
-                           src={`/images/doctors/doctor-${item.id}.png`}
+                           src={`/images/doctors/doctor-${item.id}.webp`}
                            width={1000}
                            height={1000}
                            alt="doctor"

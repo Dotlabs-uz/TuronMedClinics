@@ -83,11 +83,12 @@ const Header: React.FC<HeaderProps> = () => {
                <Select
                   defaultValue={localeValue}
                   style={{
-                     width: "80px",
                      display: "flex",
                      justifyItems: "center",
                      justifyContent: "center",
+                     border: "none",
                   }}
+                  className="h-[55px] max-lg:h-[48px] max-sm:h-10 w-[60px] max-sm:w-14"
                   value={localeValue}
                   onChange={(e: any) => changeLang(e)}
                   options={[

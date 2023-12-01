@@ -173,7 +173,7 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                      >
                         <div
                            style={{
-                              backgroundImage: `url('/images/doctors/doctor-${item.id}.png')`,
+                              backgroundImage: `url('/images/doctors/doctor-${item.id}.webp')`,
                            }}
                            className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
                         >

@@ -26,7 +26,7 @@ const Form: React.FC<FormProps> = () => {
 
    const translation: any = useContext(TranslateContext);
    const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
-   const chat_id = "1024211914";
+   const chat_id = "-1002027070064";
    const TOKEN = "6725539258:AAHu_pC-On2ktRIXbN_qs8sWXfI4oXaRAls";
    const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
@@ -41,7 +41,7 @@ const Form: React.FC<FormProps> = () => {
       setIsSubmitSuccessful(!isSubmitSuccessful);
       axios
          .post(URL, {
-            chat_id,
+            chat_id: chat_id,
             parse_mode: "html",
             text: OBJ,
          })
@@ -74,33 +74,39 @@ const Form: React.FC<FormProps> = () => {
             <div className="flex max-lg:flex-col gap-9">
                <div className="w-full flex flex-col gap-5">
                   <div className="relative rounded-lg overflow-hidden border-2 border-[#25B4F8]">
-                     <iframe
-                        className="w-full min-h-[320px] rounded-lg"
-                        src="https://yandex.uz/map-widget/v1/?ll=67.042036%2C39.649422&z=11.83"
-                     ></iframe>
+                     <div>
+                        <iframe
+                           className="w-full min-h-[400px] max-md:min-h-[300px]"
+                           src="https://yandex.uz/map-widget/v1/?ll=66.962074%2C39.652047&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozNDcyODU4NDU1EjRPyrt6YmVraXN0b24sIFNhbWFycWFuZCwgQm_Ku3N0b25zYXJveSBrb8q7Y2hhc2ksIDI4IgoNguyFQhWimx5C&z=19.18"
+                        ></iframe>
+                     </div>
                   </div>
 
-                  <div className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
-                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1376F8]">
+                  <div className="w-full flex items-center gap-4 p-5 max-sm:p-3 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
+                     <div className="p-3 flex items-center justify-center rounded-full bg-[#1376F8]">
                         <SlLocationPin color={"white"} size={27} />
                      </div>
                      <div className="">
                         <p className="text-[18px] font-medium leading-[155%]">
                            {translation.form.location}
                         </p>
-                        <p>{translation.form.locationOffice}</p>
+                        <p className="max-sm:text-sm">
+                           {translation.form.locationOffice}
+                        </p>
                      </div>
                   </div>
 
-                  <div className="w-full flex items-center gap-4 p-5 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
-                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1376F8]">
+                  <div className="w-full flex items-center gap-4 p-5 max-sm:p-3 rounded-lg shadow-[0px_5px_50px_#00000014] bg-white">
+                     <div className="p-3 flex items-center justify-center rounded-full bg-[#1376F8]">
                         <CiClock2 color={"white"} size={27} />
                      </div>
                      <div className="">
                         <p className="text-[18px] font-medium leading-[155%]">
                            {translation.form.schedule}
                         </p>
-                        <p>{translation.form.scheduleOffice}</p>
+                        <p className="max-sm:text-sm">
+                           {translation.form.scheduleOffice}
+                        </p>
                      </div>
                   </div>
                </div>
@@ -110,9 +116,9 @@ const Form: React.FC<FormProps> = () => {
                   onSubmit={handleSubmit(onSubmit)}
                   className="w-full sm:p-10 rounded-lg sm:border-2 sm:border-[#25B4F8]"
                >
-                  <div className="w-full flex max-sm:flex-col items-center gap-8">
+                  <div className="w-full flex max-sm:flex-col items-center gap-8 max-sm:gap-3">
                      <label className="w-full relative" htmlFor="first">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.firstName}
                         </p>
                         <input
@@ -130,7 +136,7 @@ const Form: React.FC<FormProps> = () => {
                      </label>
 
                      <label className="w-full relative" htmlFor="last">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.lastName}
                         </p>
                         <input
@@ -150,7 +156,7 @@ const Form: React.FC<FormProps> = () => {
 
                   <div className="w-full flex flex-col gap-5 mt-3">
                      <label className="relative" htmlFor="email">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.email}
                         </p>
                         <input
@@ -167,7 +173,7 @@ const Form: React.FC<FormProps> = () => {
                         )}
                      </label>
                      <label className="relative" htmlFor="number">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.number}
                         </p>
                         <input
@@ -187,7 +193,7 @@ const Form: React.FC<FormProps> = () => {
                         )}
                      </label>
                      <label className="relative" htmlFor="date">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.date}
                         </p>
                         <input
@@ -204,7 +210,7 @@ const Form: React.FC<FormProps> = () => {
                         )}
                      </label>
                      <label className="relative" htmlFor="message">
-                        <p className="mb-2 text-[18px] font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
+                        <p className="mb-1 text-[18px] max-sm:text-sm font-medium leading-[155%] tracking-[0.27px] cursor-pointer text-[#3C4959]">
                            {translation.form.message}
                         </p>
                         <textarea

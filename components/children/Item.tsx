@@ -18,7 +18,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
          <div className="w-full h-full absolute top-0 left-0 z-0 bg-black/50"></div>
          <Image
             className="w-full h-full object-cover absolute top-0 left-0 z-[-2]"
-            src={`/images/salt/photo-${item.img}.jpg`}
+            src={`/images/salt/photo-${item.img}.webp`}
             width={1000}
             height={1000}
             alt="salt"
@@ -53,7 +53,17 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                   onClick={() => setMore(!more)}
                   className="font-medium underline underline-offset-2 text-white"
                >
-                  {!more ? "Batafsil →" : "Yashirish"}
+                  {!more
+                     ? locale === "ru"
+                        ? "подробнее →"
+                        : locale === "uz"
+                        ? "Batafsil →"
+                        : item.tjk
+                     : locale === "ru"
+                     ? "Скрыть →"
+                     : locale === "uz"
+                     ? "Yashirish"
+                     : item.tjk}
                </button>
             </div>
          ) : null}

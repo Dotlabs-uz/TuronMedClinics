@@ -79,7 +79,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
             <div className="flex w-2/5 max-lg:w-full min-h-[420px] max-sm:min-h-[320px]">
                <Image
                   className="w-auto h-auto object-cover rounded-lg"
-                  src={"/images/160A2389.jpg"}
+                  src={"/images/160A2389.webp"}
                   width={1000}
                   height={1000}
                   alt="about Us"

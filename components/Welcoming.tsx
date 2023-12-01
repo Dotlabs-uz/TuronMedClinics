@@ -20,7 +20,7 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
       formState: { errors },
    } = useForm<Inputs>();
 
-   const chat_id = "1024211914";
+   const chat_id = "-1002027070064";
    const TOKEN = "6725539258:AAHu_pC-On2ktRIXbN_qs8sWXfI4oXaRAls";
    const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
@@ -32,7 +32,7 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
 
       axios
          .post(URL, {
-            chat_id,
+            chat_id: chat_id,
             parse_mode: "html",
             text: OBJ,
          })
@@ -40,7 +40,8 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
             if (res.status === 200 || res.status === 201) {
                console.log(res);
             }
-         });
+         })
+         .catch((err) => console.log(err));
    };
 
    useEffect(() => {
@@ -54,7 +55,7 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
    return (
       <section
          id={item.hide ? "toBook" : ""}
-         className="custom-contaner flex max-md:flex-col items-center justify-between gap-20 max-md:gap-10 pb-28 max-md:pb-14"
+         className="custom-contaner flex max-md:flex-col items-center justify-between gap-20 max-md:gap-16 pb-28 max-md:pb-14"
       >
          <div className="w-1/2 max-md:w-full">
             <h2>{item.title}</h2>
@@ -68,14 +69,14 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
                   onSubmit={handleSubmit(onSubmit)}
                   className="flex w-full relative"
                >
-                  <BsTelephone className="absolute top-3 max-sm:top-4 left-5 max-md:left-3 text-[24px] max-sm:text-[20px] pointer-events-none text-[#CFCFCF]" />
+                  <BsTelephone className="absolute top-3 max-lg:top-4 left-5 max-lg:left-3 text-[24px] max-lg:text-[20px] pointer-events-none text-[#CFCFCF]" />
                   <input
                      style={
                         errors.number
                            ? { border: "1px solid red" }
                            : { border: "1px solid #CECECE" }
                      }
-                     className="w-full max-sm:text-sm pl-14 max-md:pl-10 py-3 rounded-l-lg border border-[#CECECE] placeholder:text-[#CFCFCF] max-sm:placeholder:text-sm"
+                     className="w-full max-lg:text-sm pl-14 max-lg:pl-10 py-3 max-lg:py-2 rounded-l-lg border border-[#CECECE] placeholder:text-[#CFCFCF] max-lg:placeholder:text-sm"
                      {...register("number", {
                         required: true,
                         pattern: /[0-9]{7}$/,
@@ -83,23 +84,23 @@ const Welcoming: React.FC<WelcomingProps> = ({ item }) => {
                      type="text"
                      placeholder={item.placeholder}
                   />
-                  <button className="px-8 py-3 font-semibold tracking-[0.24px] rounded-r-lg border duration-150 ease-in border-[#1376F8] hover:border-[#3f94fb] bg-[#1376F8] hover:bg-[#3f94fb] text-white">
+                  <button className="px-8 max-lg:px-4 py-3 max-lg:text-sm font-semibold tracking-[0.24px] rounded-r-lg border duration-150 ease-in border-[#1376F8] hover:border-[#3f94fb] bg-[#1376F8] hover:bg-[#3f94fb] text-white">
                      {item.button}
                   </button>
                </form>
             ) : (
                <Link href={"toBook"}>
-                  <button className="px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
+                  <button className="px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 font-semibold tracking-[0.24px] rounded-lg duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb]">
                      {item.button}
                   </button>
                </Link>
             )}
          </div>
 
-         <div className="block-img flex relative max-w-[400px] min-h-[350px] max-md:min-h-[350px] mr-10 max-md:mr-5">
+         <div className="block-img flex relative max-w-[400px] min-h-[350px] max-md:min-h-[320px] mr-10 max-md:mr-5">
             <Image
                className="max-w-[450px] min-h-[350px] max-xl:max-w-[350px] max-sm:min-h-[330px] w-full object-cover rounded-lg mt-auto"
-               src={`/images/${item.img}.jpg`}
+               src={`/images/${item.img}.webp`}
                width={1000}
                height={1000}
                alt="photo"

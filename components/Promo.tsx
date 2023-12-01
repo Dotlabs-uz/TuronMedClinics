@@ -22,7 +22,7 @@ const Promo: React.FC<PromoProps> = () => {
             <div className="">
                <Image
                   className="max-w-[350px] min-h-[300px] max-lg:max-w-[300px] max-lg:max-h-[200px] object-cover rounded-lg"
-                  src={"/images/160A2332.jpg"}
+                  src={"/images/160A2332.webp"}
                   width={1000}
                   height={1000}
                   alt="photo"

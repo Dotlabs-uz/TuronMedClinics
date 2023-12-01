@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -44,6 +45,28 @@ export default function Home() {
 
    return (
       <>
+         <Head>
+            <meta charSet="UTF-8" />
+            <title>Turon klinika | </title>
+            <link rel="icon" type="image/x-icon" href="/images/logo.png"></link>
+            <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+            />
+            <meta
+               name="description"
+               content="Медицинская клиника Турон в Самарканде – качественные услуги от опытных врачей. Заботимся о вашем здоровье с преданностью и профессионализмом."
+            />
+            <meta
+               name="keywords"
+               content="клиника Турон, медицина, Самарканд, здоровье, врачи, лечение"
+            />
+            <meta name="author" content="Клиника Турон" />
+            <title>
+               Медицинская клиника Турон в Самарканде | Заботимся о вашем
+               здоровье
+            </title>
+         </Head>
          <Header />
          <main className="">
             <Hero />

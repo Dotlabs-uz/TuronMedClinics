@@ -1,8 +1,8 @@
 .header {
-   @apply flex items-center justify-between my-10 max-lg:my-8 px-10 max-lg:px-8 max-md:px-5 py-5 max-sm:px-0 rounded-lg bg-[#E6F6FE] max-sm:bg-white;
+   @apply flex items-center justify-between my-10 max-lg:my-5 px-10 max-lg:px-8 max-md:px-5 py-5 max-sm:px-0 rounded-lg bg-[#E6F6FE] max-sm:bg-white;
 
    .logo {
-      @apply w-20;
+      @apply w-20 max-md:w-14;
    }
 
    nav ul {
@@ -17,6 +17,19 @@
 
    .header-btns {
       @apply flex items-center gap-2;
+
+      .ant-select-selector {
+         @apply bg-[#007aff] text-white border-none ;
+
+         .ant-select-arrow {
+            span {
+               color: #fff !important;
+               background: #fff !important;
+
+               @apply text-white bg-white;
+            }
+         }
+      }
 
       button {
          @apply px-8 max-sm:px-2 max-md:px-6 py-4 max-lg:py-3 max-sm:py-2 rounded-lg font-semibold tracking-[0.24px] duration-150 ease-in text-white bg-[#197dff] hover:bg-[#3f94fb];
