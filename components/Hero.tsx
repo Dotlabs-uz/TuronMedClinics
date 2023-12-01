@@ -90,7 +90,7 @@ const Hero: React.FC<HeroProps> = () => {
                <p className="max-w-lg w-full text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] leading-[135%] text-[#3C4959]">
                   {translation.hero.title2}
                </p>
-               <p className="mt-1 text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] leading-[135%] text-[#3C4959]">
+               <p className="mt-1 text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] font-semibold leading-[135%] text-[#1376F8]">
                   {translation.hero.price}
                </p>
             </div>
@@ -100,7 +100,7 @@ const Hero: React.FC<HeroProps> = () => {
                   <Link href={"#toBook"}>
                      <button className="btn">{translation.hero.button}</button>
                   </Link>
-                  <a href="tel:+998(55)703-03-03">
+                  <a href="tel:+998(95)444-03-03">
                      <button className="phone">
                         <FaPhoneVolume className="icon" />
                      </button>
@@ -108,9 +108,8 @@ const Hero: React.FC<HeroProps> = () => {
                </div>
 
                <div className="conect-number">
-                  <p className="text">{translation.hero.text}</p>
-                  <a href="tel:+998(55)703-03-03 " className="number">
-                     +998(55)703-03-03
+                  <a href="tel:+998(95)444-03-03" className="number">
+                     +998(95)444-03-03
                   </a>
                </div>
             </div>
