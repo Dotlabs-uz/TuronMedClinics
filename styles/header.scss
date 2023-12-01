@@ -19,7 +19,7 @@
       @apply flex items-center gap-2;
 
       .ant-select-selector {
-         @apply bg-[#007aff] text-white border-none ;
+         @apply text-[#007aff] bg-white border-2 border-[#007aff];
 
          .ant-select-arrow {
             span {

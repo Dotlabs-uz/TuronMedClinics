@@ -59,7 +59,7 @@ export default function Home() {
             />
             <meta
                name="keywords"
-               content="клиника Турон, медицина, Самарканд, здоровье, врачи, лечение"
+               content="клиники в Самарканде,клиника Турон, медицина, Самарканд, здоровье, врачи, лечение"
             />
             <meta name="author" content="Клиника Турон" />
             <title>
@@ -74,7 +74,7 @@ export default function Home() {
                <div className="mb-28 max-md:mb-14">
                   <Image
                      className="w-full h-full rounded-lg"
-                     src={"/images/all.jpg"}
+                     src={"/images/all.webp"}
                      width={1000}
                      height={1000}
                      alt="doctors"

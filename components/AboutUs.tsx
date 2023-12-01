@@ -16,57 +16,108 @@ const AboutUs: React.FC<AboutUsProps> = () => {
    const arr = [
       {
          id: 0,
-         ru: "кардиология",
-         uz: "kardiologiya",
-         tjk: "кардиология",
+         ru: "Кардиология",
+         uz: "Kardiologiya",
       },
       {
          id: 1,
-         ru: "терапия",
-         uz: "terapiya",
-         tjk: "терапия",
+         ru: "Терапия",
+         uz: "Terapiya",
       },
       {
          id: 2,
-         ru: "гастроэнтерология и гепатология",
-         uz: "gastroenterologiya va gepatologiya",
-         tjk: "гастроэнтерология и гепатология",
+         ru: "Гастроэнтерология и гепатология",
+         uz: "Gastroenterologiya va gepatologiya",
       },
       {
          id: 3,
-         ru: "физиотерапия",
-         uz: "fizioterapiya",
-         tjk: "физиотерапия",
+         ru: "Физиотерапия",
+         uz: "Fizioterapiya",
       },
       {
          id: 4,
-         ru: "урология",
-         uz: "urologiya",
-         tjk: "урология",
+         ru: "Урология",
+         uz: "Urologiya",
       },
       {
          id: 5,
-         ru: "офтальмология",
-         uz: "oftalmologiya",
-         tjk: "офтальмология",
+         ru: "Офтальмология",
+         uz: "Oftalmologiya",
       },
       {
          id: 6,
-         ru: "лор",
-         uz: "lor",
-         tjk: "лор",
+         ru: "Лор",
+         uz: "Lor",
       },
       {
          id: 7,
-         ru: "лечение бесплодия и дисфункции.",
-         uz: "bepushtlik va disfunktsiyani davolash.",
-         tjk: "лечение бесплодия и дисфункции.",
+         ru: "Лечение бесплодия и дисфункции.",
+         uz: "Bepushtlik va disfunktsiyani davolash.",
       },
       {
          id: 8,
-         ru: "гинекология",
-         uz: "ginekologiya",
-         tjk: "гинекология",
+         ru: "Гинекология",
+         uz: "Ginekologiya",
+      },
+      {
+         id: 9,
+         ru: "Неврология",
+         uz: "Nevrologiya",
+      },
+      {
+         id: 10,
+         ru: "Эндокринология",
+         uz: "Endokrinologiya",
+      },
+      {
+         id: 11,
+         ru: "Аллерголория",
+         uz: "Allergiya",
+      },
+      {
+         id: 12,
+         ru: "Стоматология",
+         uz: "Stomatologiya",
+      },
+      {
+         id: 13,
+         ru: "Гастроэнтерология и гепотология",
+         uz: "Gastroenterologiya va gepotologiya",
+      },
+      {
+         id: 14,
+         ru: "Лечение дисфункции бесплодия",
+         uz: "Bepushtlik disfunktsiyasini davolash",
+      },
+      {
+         id: 15,
+         ru: "Стационар",
+         uz: "Kasalxona",
+      },
+      {
+         id: 16,
+         ru: "Соляная пещера",
+         uz: "tuz g'ori",
+      },
+      {
+         id: 17,
+         ru: "ЛФК",
+         uz: "Jismoniy mashqlar terapiyasi",
+      },
+      {
+         id: 18,
+         ru: "Рентген ",
+         uz: "rentgen",
+      },
+      {
+         id: 19,
+         ru: "Лаборатория",
+         uz: "Laboratoriya",
+      },
+      {
+         id: 20,
+         ru: "УЗИ",
+         uz: "UZI",
       },
    ];
 
@@ -91,37 +142,41 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                   <p className="text-[18px] leading-[155%] text-[#3C4959]">
                      {translation.about.title2}
                   </p>
-                  <div className="flex max-sm:flex-col justify-between">
-                     <ul className="flex flex-col gap-3 mt-5">
-                        {arr.slice(0, 5).map((item: any, idx: number) => {
+                  <div className="flex max-sml justify-between">
+                     <ul className="flex flex-col gap-3 max-sm:gap-2 mt-5">
+                        {arr.slice(0, 10).map((item: any, idx: number) => {
                            return (
                               <li
                                  key={idx}
-                                 className="flex items-center gap-3 text-[18px] font-medium"
+                                 className="flex items-center max-sm:items-start gap-3 max-sm:gap-1 text-[18px] max-sm:text-sm font-medium"
                               >
-                                 <LuShieldCheck className="text-[16px] text-[#1376F8]" />
+                                 <div className="">
+                                    <LuShieldCheck className="text-[16px]  text-[#1376F8]" />
+                                 </div>
                                  {locale === "ru"
                                     ? item.ru
                                     : locale === "uz"
                                     ? item.uz
-                                    : item.tjk}
+                                    : item.ru}
                               </li>
                            );
                         })}
                      </ul>
-                     <ul className="flex flex-col gap-3 mt-5">
-                        {arr.slice(5).map((item: any, idx: number) => {
+                     <ul className="flex flex-col gap-3 max-sm:gap-2 mt-5 max-sm:mt-1">
+                        {arr.slice(10).map((item: any, idx: number) => {
                            return (
                               <li
                                  key={idx}
-                                 className="flex items-center gap-3 text-[18px] font-medium"
+                                 className="flex items-center max-sm:items-start gap-3 max-sm:gap-1 text-[18px] max-sm:text-sm font-medium"
                               >
-                                 <LuShieldCheck className="text-[16px] text-[#1376F8]" />
+                                 <div className="">
+                                    <LuShieldCheck className="text-[16px] text-[#1376F8]" />
+                                 </div>
                                  {locale === "ru"
                                     ? item.ru
                                     : locale === "uz"
                                     ? item.uz
-                                    : item.tjk}
+                                    : item.ru}
                               </li>
                            );
                         })}

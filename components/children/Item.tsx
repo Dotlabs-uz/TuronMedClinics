@@ -30,7 +30,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                      ? item.titleRu
                      : locale == "uz"
                      ? item.titleUz
-                     : item.titleTjk}
+                     : item.titleRu}
                </h3>
 
                <p
@@ -42,7 +42,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                      ? item.ru
                      : locale === "uz"
                      ? item.uz
-                     : item.tjk}
+                     : item.ru}
                </p>
             </div>
          </div>
@@ -58,12 +58,12 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                         ? "подробнее →"
                         : locale === "uz"
                         ? "Batafsil →"
-                        : item.tjk
+                        : item.ru
                      : locale === "ru"
                      ? "Скрыть →"
                      : locale === "uz"
                      ? "Yashirish"
-                     : item.tjk}
+                     : item.ru}
                </button>
             </div>
          ) : null}

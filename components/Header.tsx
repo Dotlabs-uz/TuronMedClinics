@@ -122,21 +122,6 @@ const Header: React.FC<HeaderProps> = () => {
                            </span>
                         ),
                      },
-                     {
-                        value: "tjk",
-                        label: (
-                           <span className="flex items-center gap-1">
-                              {/* <Image
-                                 width={100}
-                                 height={100}
-                                 src="/images/eng_flag.webp"
-                                 alt="eng"
-                                 className="w-[20px] h-[20px] rounded-full"
-                              /> */}
-                              {"TJK"}
-                           </span>
-                        ),
-                     },
                   ]}
                />
                <button onClick={() => setHide(true)} className="btn-md">
