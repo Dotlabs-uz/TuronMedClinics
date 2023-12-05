@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <div id="contacts">
                      <ul>
                         <li className="text-2xl font-semibold mt-5">
-                           <a href="tel:+998(55)703-03-03">+998(55)703-03-03</a>
+                           <a href="tel:+998(95)444-03-03">+998(95)444-03-03</a>
                         </li>
                         <li className="text-2xl font-semibold mt-2">
                            <a href="tel:+998(55)703-03-04">+998(55)703-03-04</a>

@@ -29,7 +29,7 @@ const Categories: React.FC<CategoriesProps> = () => {
       },
       {
          id: 2,
-         titleRu: "специальный микронутриент",
+         titleRu: "Эстетика морской соли: роскошь в деталях",
          titleUz: "maxsus elementlar",
          ru: "Остальные стены, потолок и пол покрыты йодированной морской солью.",
          uz: "Devorlarning qolgan qisimlari, potolok va pol yodlangan dengiz tuzi bilan qoplangan.",
@@ -42,14 +42,6 @@ const Categories: React.FC<CategoriesProps> = () => {
          ru: "Специальная галогенаторная распылительная установка распыляет определенное количество хлопьев специальной фармацевтической соли, импортированной из Австралии, в течение 40-минутного сеанса. Воздух в помещении наполнен этими солевыми частицами.",
          uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi. Xona xavosi ushbu tuz zarralari bilan to'ldiriladi.",
          img: "4",
-      },
-      {
-         id: 4,
-         titleRu: "специальный микронутриент",
-         titleUz: "TUZ G'ORI",
-         ru: "Это также полезно во всех отношениях для маленьких детей.",
-         uz: "Yosh bolalar uchun ham har tomonlama foydali hisoblanadi.",
-         img: "1",
       },
    ];
 
@@ -81,11 +73,23 @@ const Categories: React.FC<CategoriesProps> = () => {
                   },
                }}
             >
-               {arr.map((item: any, idx: number) => (
-                  <SwiperSlide key={idx}>
-                     <Item item={item} />
-                  </SwiperSlide>
-               ))}
+               {arr.map(
+                  (
+                     item: {
+                        id: number;
+                        titleRu: string;
+                        titleUz: string;
+                        ru: string;
+                        uz: string;
+                        img: string;
+                     },
+                     idx: number
+                  ) => (
+                     <SwiperSlide key={idx}>
+                        <Item item={item} />
+                     </SwiperSlide>
+                  )
+               )}
             </Swiper>
             <div className="flex items-center justify-center">
                <button

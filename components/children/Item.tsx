@@ -3,7 +3,14 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 interface ItemProps {
-   item: any;
+   item: {
+      id: number;
+      titleRu: string;
+      titleUz: string;
+      ru: string;
+      uz: string;
+      img: string;
+   };
 }
 
 const Item: React.FC<ItemProps> = ({ item }) => {
