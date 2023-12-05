@@ -14,7 +14,7 @@ const Specialist: React.FC<SpecialistProps> = ({ item }) => {
          style={{
             backgroundImage: `url('/images/doctors/doctor-${item.id}.webp')`,
          }}
-         className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
+         className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover bg-blue-200`}
       >
          <div className="block-name backdrop-blur-3xl rounded-lg w-full mt-auto px-6 py-3">
             <p className="text-[22px] text-ellipsis font-semibold text-[#011632]">
