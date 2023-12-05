@@ -3,11 +3,11 @@ import { useContext } from "react";
 import Image from "next/image";
 import TranslateContext from "@/context/useTranslate";
 
-import Marquee from "react-fast-marquee";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUp } from "react-icons/bs";
+import Specialist from "./children/Specialist";
 
 const doctors = [
    {
@@ -15,7 +15,6 @@ const doctors = [
       img: "doctor",
       firstName: "Насиба",
       lastName: "Абдурахимова",
-      surName: "Юсуповна",
       job: "Директор",
    },
    {
@@ -23,7 +22,6 @@ const doctors = [
       img: "doctor",
       firstName: "Шавкат ",
       lastName: "Хакимов",
-      surName: "Нормухамедович",
       job: "бош врач, терапевт, олий тоифали врач",
    },
    {
@@ -31,7 +29,6 @@ const doctors = [
       img: "doctor",
       firstName: "Равшан",
       lastName: "Абиев",
-      surName: "Нематович",
       job: "Стоматолог",
    },
    {
@@ -39,7 +36,6 @@ const doctors = [
       img: "doctor",
       firstName: "Ихтиер",
       lastName: "Киемов",
-      surName: "Эргашевич",
       job: "оториноларинголог, олий тоифали врач",
    },
    {
@@ -47,7 +43,6 @@ const doctors = [
       img: "doctor",
       firstName: "Мафиза",
       lastName: "Ахтамова",
-      surName: "Абдурафиковна",
       job: "Врач лаборант",
    },
    {
@@ -55,7 +50,6 @@ const doctors = [
       img: "doctor",
       firstName: "Шахноза",
       lastName: "Очилова",
-      surName: "Одиловна",
       job: "Узист",
    },
    {
@@ -63,7 +57,6 @@ const doctors = [
       img: "doctor",
       firstName: "Диляра",
       lastName: "Иванченко",
-      surName: "",
       job: "Инструктор лфк",
    },
    {
@@ -71,7 +64,6 @@ const doctors = [
       img: "doctor",
       firstName: "Азамжон",
       lastName: "Хамзаев",
-      surName: "Эшонкулович",
       job: "Эндокринолог, олий тоифали врач",
    },
    {
@@ -79,7 +71,6 @@ const doctors = [
       img: "doctor",
       firstName: "Сурае",
       lastName: "Шакарова",
-      surName: "Эшонкулович",
       job: "Врач лаборант, Эндокринолог",
    },
    {
@@ -87,7 +78,6 @@ const doctors = [
       img: "doctor",
       firstName: "Гулнара",
       lastName: "Джураева",
-      surName: "Иргашевна",
       job: "Невролог, олий тоифали врач",
    },
    {
@@ -95,7 +85,6 @@ const doctors = [
       img: "doctor",
       firstName: "Ориф",
       lastName: "Маннанов",
-      surName: "Холмуминович",
       job: "Оператор рентген кабинета",
    },
    {
@@ -103,7 +92,6 @@ const doctors = [
       img: "doctor",
       firstName: "Сабохат",
       lastName: "Сафарова",
-      surName: "Ахматовна",
       job: "Акушер гинеколог, олий тоифали врач",
    },
    {
@@ -111,7 +99,6 @@ const doctors = [
       img: "doctor",
       firstName: "Дусер",
       lastName: "Расулов",
-      surName: "Каттаевич",
       job: "Алерголок, пульмонолог, олий тоифали врач",
    },
    {
@@ -119,7 +106,6 @@ const doctors = [
       img: "doctor",
       firstName: "Диёра",
       lastName: "Саидова",
-      surName: "Наимовна",
       job: "Кардиолог, бош врач уринбосари, тибиет фанлари номзоди, олий тоифали врач",
    },
    {
@@ -127,7 +113,6 @@ const doctors = [
       img: "doctor",
       firstName: "Суннатилло",
       lastName: "Хамидов",
-      surName: "Амирхонович",
       job: "Уролог, андролог, сексопатолог",
    },
 ];
@@ -181,42 +166,11 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                   },
                }}
             >
-               {doctors.map((item: any) => {
-                  return (
-                     <SwiperSlide
-                        className="bg-blue-200 pt-5 rounded-lg hover:-translate-y-2 duration-100 ease-in"
-                        key={item.id}
-                     >
-                        <div
-                           style={{
-                              backgroundImage: `url('/images/doctors/doctor-${item.id}.webp')`,
-                           }}
-                           className={`min-h-[390px] flex p-4 rounded-lg  bg-center bg-no-repeat bg-cover`}
-                        >
-                           <div className="block-name backdrop-blur-3xl rounded-lg w-full mt-auto px-6 py-3">
-                              <p className="text-[22px] text-ellipsis font-semibold text-[#011632]">
-                                 {item.firstName}
-                                 <br />
-                                 {item.lastName}
-                                 <br />
-                                 {item.surName}
-                              </p>
-                              {item.job[20] ? (
-                                 <Marquee>
-                                    <p className="truncate text-gray-600 pr-10">
-                                       {item.job}
-                                    </p>
-                                 </Marquee>
-                              ) : (
-                                 <p className="truncate text-gray-600">
-                                    {item.job}.
-                                 </p>
-                              )}
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                  );
-               })}
+               {doctors.map((item: any) => (
+                  <SwiperSlide key={item.id}>
+                     <Specialist item={item} />
+                  </SwiperSlide>
+               ))}
             </Swiper>
             <div className="flex items-center justify-center">
                <button
