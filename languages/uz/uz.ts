@@ -12,7 +12,7 @@ const uz = {
    hero: {
       title: "«Turon Med Premium» ko'p tarmoqli tibbiy markaz.",
       title2:
-         "Kardiologiya, terapiya, nevrologiya, endokrinologiya, oftalmologiya, urologiya va andrologiya, ginekologiya, bepushtlik va erkaklar disfunktsiyasini davolash, fizioterapiya, allergiya qilish, stomatologiya, gepatologiya, LOR, akupunktur va boshkalar",
+         "Kardiologiya, terapiya, nevrologiya, endokrinologiya, oftalmologiya, urologiya va andrologiya, tuz g'ori, ginekologiya, bepushtlik va erkaklar disfunktsiyasini davolash, fizioterapiya, allergiya qilish, stomatologiya, gepatologiya, LOR, akupunktur va boshkalar",
       button: "Uchrashuvni belgilang",
       text: "24/7 tibbiy tez yordam",
       price: "Narxlarimiz Toshkentga nisbatan ikki baravar arzon.",

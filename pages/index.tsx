@@ -47,7 +47,7 @@ export default function Home() {
       <>
          <Head>
             <meta charSet="UTF-8" />
-            <title>Turon klinika | </title>
+            <title>Турон мед премиум</title>
             <link rel="icon" type="image/x-icon" href="/images/logo.png"></link>
             <meta
                name="viewport"
@@ -62,10 +62,6 @@ export default function Home() {
                content="клиники в Самарканде,клиника Турон, медицина, Самарканд, здоровье, врачи, лечение"
             />
             <meta name="author" content="Клиника Турон" />
-            <title>
-               Медицинская клиника Турон в Самарканде | Заботимся о вашем
-               здоровье
-            </title>
          </Head>
          <Header />
          <main className="">

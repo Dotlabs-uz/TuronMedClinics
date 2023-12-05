@@ -1,12 +1,13 @@
 import { useState } from "react";
-import TranslateContext from "@/context/useTranslate";
 import { useContext } from "react";
+import Image from "next/image";
+import TranslateContext from "@/context/useTranslate";
 
+import Marquee from "react-fast-marquee";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUp } from "react-icons/bs";
-import Image from "next/image";
 
 const doctors = [
    {
@@ -14,6 +15,7 @@ const doctors = [
       img: "doctor",
       firstName: "Насиба",
       lastName: "Абдурахимова",
+      surName: "Юсуповна",
       job: "Директор",
    },
    {
@@ -21,13 +23,15 @@ const doctors = [
       img: "doctor",
       firstName: "Шавкат ",
       lastName: "Хакимов",
-      job: "Терапевт",
+      surName: "Нормухамедович",
+      job: "бош врач, терапевт, олий тоифали врач",
    },
    {
       id: 3,
       img: "doctor",
       firstName: "Равшан",
       lastName: "Абиев",
+      surName: "Нематович",
       job: "Стоматолог",
    },
    {
@@ -35,13 +39,15 @@ const doctors = [
       img: "doctor",
       firstName: "Ихтиер",
       lastName: "Киемов",
-      job: "Оториноларинголок",
+      surName: "Эргашевич",
+      job: "оториноларинголог, олий тоифали врач",
    },
    {
       id: 5,
       img: "doctor",
       firstName: "Мафиза",
       lastName: "Ахтамова",
+      surName: "Абдурафиковна",
       job: "Врач лаборант",
    },
    {
@@ -49,13 +55,15 @@ const doctors = [
       img: "doctor",
       firstName: "Шахноза",
       lastName: "Очилова",
+      surName: "Одиловна",
       job: "Узист",
    },
    {
       id: 7,
       img: "doctor",
       firstName: "Диляра",
-      lastName: "Иванченка",
+      lastName: "Иванченко",
+      surName: "",
       job: "Инструктор лфк",
    },
    {
@@ -63,27 +71,31 @@ const doctors = [
       img: "doctor",
       firstName: "Азамжон",
       lastName: "Хамзаев",
-      job: "Эндокринолог",
+      surName: "Эшонкулович",
+      job: "Эндокринолог, олий тоифали врач",
    },
    {
       id: 10,
       img: "doctor",
       firstName: "Сурае",
       lastName: "Шакарова",
-      job: "Врач лаборант",
+      surName: "Эшонкулович",
+      job: "Врач лаборант, Эндокринолог",
    },
    {
       id: 12,
       img: "doctor",
       firstName: "Гулнара",
       lastName: "Джураева",
-      job: "Невролог",
+      surName: "Иргашевна",
+      job: "Невролог, олий тоифали врач",
    },
    {
       id: 13,
       img: "doctor",
       firstName: "Ориф",
-      lastName: "Холмуминович",
+      lastName: "Маннанов",
+      surName: "Холмуминович",
       job: "Оператор рентген кабинета",
    },
    {
@@ -91,27 +103,31 @@ const doctors = [
       img: "doctor",
       firstName: "Сабохат",
       lastName: "Сафарова",
-      job: "Акушер гинеколог",
+      surName: "Ахматовна",
+      job: "Акушер гинеколог, олий тоифали врач",
    },
    {
       id: 15,
       img: "doctor",
       firstName: "Дусер",
       lastName: "Расулов",
-      job: "Алерголок, пульмонолог",
+      surName: "Каттаевич",
+      job: "Алерголок, пульмонолог, олий тоифали врач",
    },
    {
       id: 16,
       img: "doctor",
       firstName: "Диёра",
       lastName: "Саидова",
-      job: "Кардиолог",
+      surName: "Наимовна",
+      job: "Кардиолог, бош врач уринбосари, тибиет фанлари номзоди, олий тоифали врач",
    },
    {
       id: 17,
       img: "doctor",
       firstName: "Суннатилло",
       lastName: "Хамидов",
+      surName: "Амирхонович",
       job: "Уролог, андролог, сексопатолог",
    },
 ];
@@ -182,10 +198,20 @@ const Specialists: React.FC<SpecialistsProps> = () => {
                                  {item.firstName}
                                  <br />
                                  {item.lastName}
+                                 <br />
+                                 {item.surName}
                               </p>
-                              <p className="truncate text-gray-600">
-                                 {item.job}.
-                              </p>
+                              {item.job[20] ? (
+                                 <Marquee>
+                                    <p className="truncate text-gray-600 pr-10">
+                                       {item.job}
+                                    </p>
+                                 </Marquee>
+                              ) : (
+                                 <p className="truncate text-gray-600">
+                                    {item.job}.
+                                 </p>
+                              )}
                            </div>
                         </div>
                      </SwiperSlide>
