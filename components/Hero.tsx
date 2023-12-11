@@ -93,6 +93,9 @@ const Hero: React.FC<HeroProps> = () => {
                <p className="mt-1 text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] font-semibold leading-[135%] text-[#1376F8]">
                   {translation.hero.price}
                </p>
+               <p className="mt-1 text-[18px] max-lg:text-[12px] max-sm:text-[18px] tracking-[0.27px] font-semibold leading-[135%] text-[#1376F8]">
+                  {translation.hero.sub_price} 
+               </p>
             </div>
 
             <div className="conect">

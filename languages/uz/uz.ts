@@ -16,6 +16,7 @@ const uz = {
       button: "Uchrashuvni belgilang",
       text: "24/7 tibbiy tez yordam",
       price: "Narxlarimiz Toshkentga nisbatan ikki baravar arzon.",
+      sub_price: "Premium darajadagi xizmat ko'rsatish va sifat."
    },
    welcoming: {
       consultation: "Arizangizni qoldiring",

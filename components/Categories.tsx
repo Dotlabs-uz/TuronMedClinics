@@ -37,7 +37,7 @@ const Categories: React.FC<CategoriesProps> = () => {
       },
       {
          id: 3,
-         titleRu: "Гималайский розовый",
+         titleRu: "Галогенераторная установка",
          titleUz: "Gimolay pushti rang",
          ru: "Специальная галогенаторная распылительная установка распыляет определенное количество хлопьев специальной фармацевтической соли, импортированной из Австралии, в течение 40-минутного сеанса. Воздух в помещении наполнен этими солевыми частицами.",
          uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi. Xona xavosi ushbu tuz zarralari bilan to'ldiriladi.",
