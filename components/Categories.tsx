@@ -21,7 +21,7 @@ const Categories: React.FC<CategoriesProps> = () => {
       },
       {
          id: 1,
-         titleRu: "йодированная морская соль",
+         titleRu: "Гималайская соль",
          titleUz: "yodlangan dengiz tuzi",
          ru: "Стены соляной пещеры покрыты плиткой из гималайской розовой соли. Под воздействием тепла такая плитка выделяет в воздух особые микроэлементы.",
          uz: "Tuz g'ori devorlari gimolay pushti rang tuz plitkalari bilan terilgan. Issiqlik tasirida ushbu plitkalar xavoga maxsus mikroelementlar ajratib chiqaradi.",
@@ -39,8 +39,8 @@ const Categories: React.FC<CategoriesProps> = () => {
          id: 3,
          titleRu: "Галогенераторная установка",
          titleUz: "Galogenerator stansiyasi",
-         ru: "Специальная галогенаторная распылительная установка <span style='color: #1376F8 !important'> распыляет </span> определенное количество хлопьев <span style='color: #1376F8 !important' > специальной фармацевтической соли, импортированной из Австралии, </span> в течение 40-минутного сеанса. Воздух в помещении <span style='color: #1376F8 !important'>наполняется</span> этими солевыми частицами.",
-         uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda <span style='color: #1376F8 !important'> Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi. </span> Xona xavosi ushbu tuz zarralari bilan <span style='color: #1376F8 !important' >to'ldiriladi.</span>",
+         ru: "Специальная галогенаторная распылительная установка  распыляет  определенное количество хлопьев специальной фармацевтической соли, импортированной из Австралии,  в течение 40-минутного сеанса. Воздух в помещении наполняется этими солевыми частицами.",
+         uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda  Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi.  Xona xavosi ushbu tuz zarralari bilan to'ldiriladi.",
          img: "4",
       },
    ];
