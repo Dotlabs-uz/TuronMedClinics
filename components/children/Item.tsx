@@ -44,12 +44,9 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                   className={`text-center text-white ${
                      item.ru.length > 80 && !more ? "title" : ""
                   }`}
+                  dangerouslySetInnerHTML={{__html: locale === "ru" ? item.ru : item.uz}}
                >
-                  {locale === "ru"
-                     ? item.ru
-                     : locale === "uz"
-                     ? item.uz
-                     : item.ru}
+                  {/* {locale === "ru" ? item.ru : item.uz} */}
                </p>
             </div>
          </div>
