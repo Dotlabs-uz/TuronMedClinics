@@ -38,9 +38,9 @@ const Categories: React.FC<CategoriesProps> = () => {
       {
          id: 3,
          titleRu: "Галогенераторная установка",
-         titleUz: "Gimolay pushti rang",
-         ru: "Специальная галогенаторная распылительная <span style='text-decoration: underline #1376F8 3px' > распыляет </span> определенное количество хлопьев <span style='text-decoration: underline #1376F8 3px' > специальной фармацевтической соли, импортированной из Австралии, </span> в течение 40-минутного сеанса. Воздух в помещении наполнен этими солевыми частицами.",
-         uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi. Xona xavosi ushbu tuz zarralari bilan to'ldiriladi.",
+         titleUz: "Galogenerator stansiyasi",
+         ru: "Специальная галогенаторная распылительная <span style='text-decoration: underline #1376F8 3px !important'> распыляет </span> определенное количество хлопьев <span style='text-decoration: underline #1376F8 3px' > специальной фармацевтической соли, импортированной из Австралии, </span> в течение 40-минутного сеанса. Воздух в помещении наполнен этими солевыми частицами.",
+         uz: "Maxsus galogenirator purkagichi o'rnatilishi 40 minut seans davomida ma'lum miqdorda <span style='text-decoration: underline #1376F8 3px !important'> Avstraliyadan keltirilgan maxsus farmatevtik tuz parchalarini purkab turadi. </span> Xona xavosi ushbu tuz zarralari bilan to'ldiriladi.",
          img: "4",
       },
    ];
