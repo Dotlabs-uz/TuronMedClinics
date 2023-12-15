@@ -32,19 +32,20 @@ const Item: React.FC<ItemProps> = ({ item }) => {
          />
          <div className="flex flex-col items-center relative z-20">
             <div className="">
-               <h3 className="my-2 text-[22px] font-medium text-center text-white">
-                  {locale == "ru"
-                     ? item.titleRu
-                     : locale == "uz"
-                     ? item.titleUz
-                     : item.titleRu}
-               </h3>
+               <h3
+                  className="my-2 text-[22px] font-medium text-center text-white"
+                  dangerouslySetInnerHTML={{
+                     __html: locale === "ru" ? item.titleRu : item.titleUz,
+                  }}
+               ></h3>
 
                <p
                   className={`text-center text-white ${
                      item.ru.length > 80 && !more ? "title" : ""
                   }`}
-                  dangerouslySetInnerHTML={{__html: locale === "ru" ? item.ru : item.uz}}
+                  dangerouslySetInnerHTML={{
+                     __html: locale === "ru" ? item.ru : item.uz,
+                  }}
                >
                   {/* {locale === "ru" ? item.ru : item.uz} */}
                </p>

@@ -1,5 +1,7 @@
+import { useContext, useEffect, useRef } from "react";
 import TranslateContext from "@/context/useTranslate";
-import { useContext } from "react";
+import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -89,10 +91,68 @@ export default function Home() {
             <Specialists />
             {/* <Reviews /> */}
             <FAQ />
+            <section>
+               <div className="custom-contaner w-full py-10 max-md:py-5">
+                  <Fancybox
+                     options={{
+                        Carousel: {
+                           infinite: false,
+                        },
+                     }}
+                  >
+                     <div className="flex justify-center gap-5 max-sm:gap-2">
+                        <a
+                           className="block w-fit"
+                           data-fancybox="gallery"
+                           href="/video/video-1.mp4"
+                        >
+                           <video
+                              controls
+                              className="max-w-sm w-full object-cover"
+                           >
+                              <source src="/video/video-1.mp4" />
+                           </video>
+                        </a>
+                        <a
+                           className="block w-fit"
+                           data-fancybox="gallery"
+                           href="/video/video-2.mp4"
+                        >
+                           <video
+                              controls
+                              className="max-w-sm w-full object-cover"
+                           >
+                              <source src="/video/video-2.mp4" />
+                           </video>
+                        </a>
+                     </div>
+                  </Fancybox>
+               </div>
+            </section>
             <Form />
             <Promo />
          </main>
          <Footer />
       </>
    );
+}
+
+function Fancybox(props) {
+   const containerRef = useRef(null);
+
+   useEffect(() => {
+      const container = containerRef.current;
+
+      const delegate = props.delegate || "[data-fancybox]";
+      const options = props.options || {};
+
+      NativeFancybox.bind(container, delegate, options);
+
+      return () => {
+         NativeFancybox.unbind(container);
+         NativeFancybox.close();
+      };
+   });
+
+   return <div ref={containerRef}>{props.children}</div>;
 }
