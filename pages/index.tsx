@@ -137,7 +137,7 @@ export default function Home() {
    );
 }
 
-function Fancybox(props) {
+function Fancybox(props: any) {
    const containerRef = useRef(null);
 
    useEffect(() => {
